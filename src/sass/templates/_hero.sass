@@ -1,0 +1,53 @@
+.hero
+  position: relative
+  display: flex
+  flex-direction: column
+  padding-top: 100px
+  background: $dark url('../img/hero_image.jpg') no-repeat center /  cover
+  height: 100vh
+  color: $light
+  &__content
+    max-width: 670px
+  &__text 
+    font-size: 22px
+    max-width: 500px
+  &__instagram 
+    max-width: 80px
+    height: 100%
+    position: absolute
+    top: 0
+    left: 0
+  &__title
+    margin: 0
+  &__button
+    margin-right: 20px
+  &__scroll-down
+    position: absolute
+    left: 0
+    bottom: 0
+    min-width: 247px
+    min-height: 97px
+    background-color: $dark
+    display: flex
+    justify-content: center
+    align-items: center
+    color: $light
+    text-transform: uppercase
+    text-decoration: none
+.instagram 
+  background-color: $dark
+  display: flex
+  justify-content: center
+  align-items: center
+  &__link
+    text-decoration: none
+    text-transform: uppercase
+    color: $primary
+    transform: rotate(90deg)
+.title
+  font-family: 'Yeseva One', cursive;
+  text-transform: uppercase
+  font-size: 40px
+  &--primary
+    color: $primary
+  
