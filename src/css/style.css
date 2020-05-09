@@ -449,7 +449,7 @@ body {
       border: 2px solid #e3b873;
       border-radius: 50%;
       margin-left: 12px;
-      background: url("../img/arow-down.svg") no-repeat center; }
+      background: url("../img/arrow-down.svg") no-repeat center; }
 
 .instagram {
   background-color: #131313;
@@ -457,6 +457,7 @@ body {
   justify-content: center;
   align-items: center; }
   .instagram__link {
+    line-height: 0.8;
     display: flex;
     align-items: center;
     text-decoration: none;
