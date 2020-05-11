@@ -11,11 +11,14 @@
   justify-content: space-between
   align-items: center
   &__logo
-    font-size: 1.09rem;
-    margin-right: 1.8rem;
+    margin-right: 1.8rem
+    transition: color 0.3s
 .logo
   color: $primary 
   text-transform: uppercase
+  text-decoration: none
+  font-size: 1.09rem
+  outline-color: $primary
 .nav
   &__item
     text-decoration: none
@@ -23,10 +26,12 @@
     text-transform: uppercase
     margin-right: 2.58rem
     transition: color 0.2s
-    &:hover
-      color: $primary
+    outline-color: $primary
 .phone
   color: $primary
 .contacts
   &__phone
     margin-right: 3.2rem
+    outline-color: $primary
+    transition: color 0.3s
+    

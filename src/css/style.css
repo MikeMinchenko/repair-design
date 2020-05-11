@@ -334,14 +334,15 @@ template {
   .button--primary {
     background-color: #e3b873;
     color: #ffffff;
-    box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.2);
-    transition: box-shadow 0.3s; }
-    .button--primary:hover {
-      box-shadow: none; }
+    box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.4);
+    transition: box-shadow 0.3s;
+    outline-color: #ffffff; }
   .button--outline {
     border: 1px solid #ffffff;
     background-color: transparent;
-    color: #ffffff; }
+    color: #ffffff;
+    outline-color: #e3b873;
+    transition: box-shadow 0.3s; }
 
 *, *:before, *:after {
   box-sizing: border-box; }
@@ -382,27 +383,31 @@ body {
   justify-content: space-between;
   align-items: center; }
   .menu__logo {
-    font-size: 1.09rem;
-    margin-right: 1.8rem; }
+    margin-right: 1.8rem;
+    transition: color 0.3s; }
 
 .logo {
   color: #e3b873;
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  text-decoration: none;
+  font-size: 1.09rem;
+  outline-color: #e3b873; }
 
 .nav__item {
   text-decoration: none;
   color: #ffffff;
   text-transform: uppercase;
   margin-right: 2.58rem;
-  transition: color 0.2s; }
-  .nav__item:hover {
-    color: #e3b873; }
+  transition: color 0.2s;
+  outline-color: #e3b873; }
 
 .phone {
   color: #e3b873; }
 
 .contacts__phone {
-  margin-right: 3.2rem; }
+  margin-right: 3.2rem;
+  outline-color: #e3b873;
+  transition: color 0.3s; }
 
 .hero {
   position: relative;
@@ -457,7 +462,9 @@ body {
     color: #ffffff;
     text-transform: uppercase;
     text-decoration: none;
-    font-size: 1.01rem; }
+    font-size: 1.01rem;
+    outline-color: #e3b873;
+    transition: color 0.3s; }
     .hero__scroll-down::after {
       content: '';
       width: 30px;
@@ -481,7 +488,9 @@ body {
     text-transform: uppercase;
     color: #e3b873;
     transform: rotate(90deg);
-    margin-bottom: 32px; }
+    margin-bottom: 32px;
+    outline-color: #e3b873;
+    transition: color 0.3s; }
     .instagram__link::after {
       content: '';
       margin-left: 8px;
@@ -495,3 +504,87 @@ body {
   font-size: 2.84rem; }
   .title--primary {
     color: #e3b873; }
+
+@media screen and (max-width: 1230px) {
+  .contacts__phone {
+    margin-right: 1.5rem; }
+  .nav__item {
+    margin-right: 1.5rem; } }
+
+@media screen and (min-width: 991px) {
+  .menu__logo:hover {
+    color: #ecce9e; }
+  .nav__item:hover {
+    color: #e3b873; }
+  .contacts__phone:hover {
+    text-decoration: none;
+    color: #ffffff; }
+  .button:hover {
+    cursor: pointer; }
+  .button--primary {
+    transition: box-shadow 0.3s; }
+    .button--primary:hover {
+      box-shadow: none;
+      background-color: rgba(227, 184, 115, 0.8); }
+  .button--outline {
+    transition: box-shadow 0.3s; }
+    .button--outline:hover {
+      border-color: #e3b873;
+      box-shadow: 0 0 40px rgba(227, 184, 115, 0.5) inset; }
+  .hero__scroll-down:hover {
+    color: #e3b873; }
+  .instagram__link:hover {
+    color: #ecce9e; } }
+
+@media screen and (max-width: 1096px) {
+  html {
+    font-size: 12px; }
+  .menu__logo {
+    font-size: 1rem; } }
+
+@media screen and (max-width: 991px) and (min-width: 768px) {
+  .logo {
+    display: none; } }
+
+@media screen and (max-width: 991px) {
+  .menu {
+    justify-content: space-between; }
+  .contacts {
+    display: flex;
+    align-items: center; }
+    .contacts__phone {
+      margin-right: 1rem; }
+  .nav__item {
+    margin-right: 1rem; }
+  .hero__content {
+    margin-left: 3.98rem; } }
+
+@media screen and (max-width: 767px) {
+  .nav {
+    display: none; }
+  .hero__instagram {
+    display: none; } }
+
+@media screen and (max-width: 575px) {
+  .contacts__button {
+    display: none; }
+  .contacts__phone {
+    margin: 0;
+    color: #ffffff;
+    text-decoration: none; }
+  .hero__content {
+    margin-left: 0; }
+  .hero__scroll-down {
+    display: none; }
+  .hero__button {
+    width: 100%;
+    margin-right: 0;
+    margin-bottom: 2rem; }
+  .hero__title {
+    font-size: 1.9rem;
+    max-width: 26.75rem; } }
+
+@media screen and (max-width: 365px) {
+  __text {
+    font-size: 1.5rem;
+    min-width: 25rem; } }
