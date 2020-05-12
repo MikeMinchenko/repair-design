@@ -1,11 +1,16 @@
-@media screen and ( max-width: 1230px )
+@media screen and ( max-width: 1220px )
   .contacts
     &__phone
       margin-right: 1.5rem
   .nav
     &__item
       margin-right: 1.5rem
-@media screen and ( min-width: 991px )
+  html
+    font-size: 12px
+  .hero
+    &__content
+      margin-left: 5.98rem
+@media screen and ( min-width: 992px )
   .menu
     &__logo
       &:hover
@@ -40,36 +45,68 @@
     &__link
       &:hover
         color: lighten($primary, 10)
-@media screen and ( max-width: 1096px )
-  html
-    font-size: 12px
-  .menu
-    &__logo
-      font-size: 1rem
-@media screen and ( max-width: 991px ) and (min-width: 768px )
-  .logo
-    display: none
-@media screen and ( max-width: 991px ) 
-  .menu
-    justify-content: space-between
+@media screen and ( max-width: 992px ) 
   .contacts
     display: flex
     align-items: center
     &__phone
       margin-right: 1rem  
   .nav
-    &__item
-      margin-right: 1rem
+    display: none
   .hero
-    &__content
-      margin-left: 3.98rem
-@media screen and ( max-width: 767px )
+    &__scroll-down
+      display: none
+  html
+    font-size: 12px
+  .menu
+    &__logo
+      font-size: 1rem
+@media screen and ( max-width: 768px )
   .nav
     display: none
   .hero
     &__instagram
       display: none
-@media screen and ( max-width: 575px)
+    &__content
+      margin-left: 3.98rem
+  .row
+    flex-direction: column
+    align-items: center
+  .types
+    &__card
+      margin-bottom: 6.58rem
+    &__section-title
+      margin-bottom: 3.61rem
+  .design
+    &__card
+      margin-bottom: 6.58rem 
+  .card
+    &__text
+      margin-left: 0
+      margin-top: -11.27rem
+    &__list
+      font-size: 1.08rem
+      line-height: 1.93rem
+      margin-bottom: 1.43rem
+    &__price-tag
+      padding: 1.014rem 1.285rem
+    &__text-start
+      text-align: center
+    &__overflow
+      max-height: 13.13rem
+      overflow: hidden
+    &__ellipsis
+      &::after
+        content: ' ...'
+  .section
+    .section-subtitle
+      line-height: 1.79rem
+      font-size: 1.25rem
+  .design
+    &__section-subtitle
+      margin: 1.6rem auto 0 auto
+      max-width: 24.92rem
+@media screen and ( max-width: 576px)
   .contacts
     &__button
       display: none
@@ -80,17 +117,33 @@
   .hero
     &__content
       margin-left: 0
-    &__scroll-down
-      display: none
     &__button
-      width: 100%
+      display: block
       margin-right: 0
       margin-bottom: 2rem
     &__title
       font-size: 1.9rem
       max-width: 26.75rem
-@media screen and ( max-width: 365px )
     &__text
       font-size: 1.5rem
-      min-width: 25rem
+      margin-bottom: 2.7rem
+  .section
+    &-title
+      &__heading
+        font-size: 1.83rem
+  .card
+    &__title
+      font-size: 1.25rem 
+    &__price-tag
+      font-size: 1.25rem
+      min-width: 15.87rem 
+@media screen and ( max-width: 375px)  
+  .hero
+    &__button
+      width: 100%
+      min-height: 51px
+    &__text
+      max-width: 26.5rem
+
+
     
