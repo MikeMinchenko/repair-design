@@ -355,13 +355,10 @@ template {
     color: rgba(255, 255, 255, 0.5); }
 
 .input {
-  font-family: 'Futura Medium';
-  font-weight: normal;
   border: none;
   background-color: transparent;
   outline-color: #e3b873;
   font-size: 1.28rem;
-  color: #ffffff;
   padding: 0.5rem 0; }
   .input--light {
     border-bottom: 1px solid rgba(255, 255, 255, 0.15); }
@@ -636,6 +633,8 @@ sup {
   padding-left: 2.4rem; }
 
 .modal {
+  opacity: 0;
+  visibility: hidden;
   position: fixed;
   z-index: 199;
   left: 0;
@@ -648,6 +647,9 @@ sup {
   display: flex;
   align-items: center;
   justify-content: center; }
+  .modal--visible {
+    opacity: 1;
+    visibility: visible; }
   .modal__dialog {
     position: relative;
     max-width: 36.35rem;
@@ -676,6 +678,9 @@ sup {
     display: flex;
     flex-direction: column; }
   .modal__input {
+    font-family: 'Futura Medium';
+    font-weight: normal;
+    color: #ffffff;
     margin-bottom: 3.428rem; }
     .modal__input:last-of-type {
       margin-bottom: 1rem; }
@@ -803,3 +808,6 @@ sup {
   .card__price-tag {
     font-size: 1.25rem;
     min-width: 15.87rem; } }
+
+@media screen and (max-width: 375px) {
+  max-width: 100%; }
