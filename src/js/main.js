@@ -10,4 +10,19 @@ document.addEventListener("DOMContentLoaded", function(event) {
     element.addEventListener('click', switchModal);
   });
   closeBtn.addEventListener('click', switchModal); 
+  
+  window.onclick = (e) => {
+    if (e.target === modal) {
+      modal.classList.remove('modal--visible');
+    }
+  };  
+  
+  window.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      modal.classList.remove('modal--visible');
+    }
+  });
+  
 });
+
+

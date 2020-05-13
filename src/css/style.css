@@ -359,7 +359,7 @@ template {
   background-color: transparent;
   outline-color: #e3b873;
   font-size: 1.28rem;
-  padding: 0.5rem 0; }
+  padding: 0.4rem 0 0.5rem; }
   .input--light {
     border-bottom: 1px solid rgba(255, 255, 255, 0.15); }
     .input--light::placeholder {
@@ -373,7 +373,8 @@ template {
 
 .policy__label {
   display: flex;
-  align-items: center; }
+  align-items: center;
+  font-size: 1.142rem; }
   .policy__label::before {
     content: '';
     width: 18px;
@@ -672,7 +673,7 @@ sup {
     line-height: 1.967rem;
     text-align: center;
     margin: 0;
-    margin-bottom: 2.428rem;
+    margin-bottom: 2.028rem;
     font-weight: normal; }
   .modal__form {
     display: flex;
@@ -683,11 +684,14 @@ sup {
     color: #ffffff;
     margin-bottom: 3.428rem; }
     .modal__input:last-of-type {
-      margin-bottom: 1rem; }
+      margin-bottom: 0; }
   .modal__policy {
     margin-bottom: 2.785rem; }
   .modal__button {
-    align-self: flex-end; }
+    align-self: flex-end;
+    padding: 1.18rem 1.571rem;
+    width: 15.2rem;
+    margin-right: 0.2rem; }
 
 @media screen and (max-height: 610px) {
   .hero__scroll-down {
@@ -810,4 +814,7 @@ sup {
     min-width: 15.87rem; } }
 
 @media screen and (max-width: 375px) {
-  max-width: 100%; }
+  .hero__content {
+    max-width: 100%; }
+  .modal__button {
+    align-self: center; } }
