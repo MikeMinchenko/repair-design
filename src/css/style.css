@@ -1,14 +1,21 @@
 @font-face {
   font-family: 'Futura Book';
-  src: url("../fonts/futura/FuturaBookC.woff") format("woff"), url("../fonts/futura/FuturaBookC.woff2") format("woff");
+  src: url("../fonts/futura/FuturaBookC.woff") format("woff"), url("../fonts/futura/FuturaBookC.woff2") format("woff2");
   font-weight: normal;
   font-style: normal;
   font-display: swap; }
 
 @font-face {
   font-family: 'Futura Demi';
-  src: url("../fonts/futura/FuturaDemiC.woff") format("woff"), url("../fonts/futura/FuturaDemiC.woff2") format("woff");
-  font-weight: 100, 200, 300, 400, 500, 600, 700, 800, 900;
+  src: url("../fonts/futura/FuturaDemiC.woff") format("woff"), url("../fonts/futura/FuturaDemiC.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap; }
+
+@font-face {
+  font-family: 'Futura Medium';
+  src: url("../fonts/futura/FuturaMediumC.woff") format("woff"), url("../fonts/futura/FuturaMediumC.woff") format("woff2");
+  font-weight: normal;
   font-style: normal;
   font-display: swap; }
 
@@ -342,6 +349,43 @@ template {
     outline-color: #e3b873;
     transition: box-shadow 0.3s; }
 
+.label {
+  font-size: 1.07rem; }
+  .label--light {
+    color: rgba(255, 255, 255, 0.5); }
+
+.input {
+  font-family: 'Futura Medium';
+  font-weight: normal;
+  border: none;
+  background-color: transparent;
+  outline-color: #e3b873;
+  font-size: 1.28rem;
+  color: #ffffff;
+  padding: 0.5rem 0; }
+  .input--light {
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15); }
+    .input--light::placeholder {
+      color: #ffffff; }
+
+.policy__checkbox {
+  opacity: 0;
+  visibility: hidden; }
+  .policy__checkbox:checked + .policy__label::before {
+    background: #e3b873 url("../img/modal/check.svg") no-repeat center; }
+
+.policy__label {
+  display: flex;
+  align-items: center; }
+  .policy__label::before {
+    content: '';
+    width: 18px;
+    height: 18px;
+    border: 1px solid #e3b873;
+    border-radius: 1px;
+    cursor: pointer;
+    margin-right: 0.64rem; }
+
 *, *:before, *:after {
   box-sizing: border-box; }
 
@@ -399,7 +443,6 @@ sup {
   justify-content: space-between;
   align-items: center; }
   .menu__logo {
-    margin-right: 1.8rem;
     transition: color 0.3s; }
 
 .logo {
@@ -448,7 +491,7 @@ sup {
   .hero__content {
     max-width: 46.86rem;
     position: relative;
-    margin-left: 2.98rem; }
+    margin-left: 6.98rem; }
   .hero__text {
     font-size: 1.57rem;
     max-width: 35.7rem;
@@ -588,19 +631,70 @@ sup {
   color: #363636;
   margin: 1.3rem auto 0 auto; }
 
-.price-tag--start {
+.card {
   text-align: left;
   padding-left: 2.4rem; }
 
-@media screen and (max-width: 1220px) {
+.modal {
+  position: fixed;
+  z-index: 199;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(19, 19, 19, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .modal__dialog {
+    position: relative;
+    max-width: 36.35rem;
+    background: #131313 url("../img/modal/bg.svg") no-repeat center;
+    padding: 2.357rem 3.5rem 1.928rem;
+    color: #ffffff; }
+  .modal__close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: none;
+    width: 28px;
+    height: 28px;
+    background: transparent url("../img/modal/exit.svg") no-repeat center;
+    margin: 12px;
+    cursor: pointer; }
+  .modal__title {
+    font-family: 'Yeseva One', cursive;
+    font-size: 1.357rem;
+    line-height: 1.967rem;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 2.428rem;
+    font-weight: normal; }
+  .modal__form {
+    display: flex;
+    flex-direction: column; }
+  .modal__input {
+    margin-bottom: 3.428rem; }
+    .modal__input:last-of-type {
+      margin-bottom: 1rem; }
+  .modal__policy {
+    margin-bottom: 2.785rem; }
+  .modal__button {
+    align-self: flex-end; }
+
+@media screen and (max-height: 610px) {
+  .hero__scroll-down {
+    display: none; } }
+
+@media screen and (max-width: 1200px) {
+  html {
+    font-size: 12px; }
   .contacts__phone {
     margin-right: 1.5rem; }
   .nav__item {
-    margin-right: 1.5rem; }
-  html {
-    font-size: 12px; }
-  .hero__content {
-    margin-left: 5.98rem; } }
+    margin-right: 1.5rem; } }
 
 @media screen and (min-width: 992px) {
   .menu__logo:hover {
@@ -667,19 +761,19 @@ sup {
     margin-bottom: 1.43rem; }
   .card__price-tag {
     padding: 1.014rem 1.285rem; }
+  .card__text-start {
+    text-align: center; }
+  .card__overflow {
+    max-height: 13.13rem;
+    overflow: hidden; }
+  .card__ellipsis::after {
+    content: ' ...'; }
   .section .section-subtitle {
     line-height: 1.79rem;
     font-size: 1.25rem; }
   .design__section-subtitle {
     margin: 1.6rem auto 0 auto;
-    max-width: 24.92rem; }
-  .price-tag--start {
-    text-align: center; }
-  .list--overflow {
-    max-height: 13.13rem;
-    overflow: hidden; }
-  .item--ellipsis::after {
-    content: ' ...'; } }
+    max-width: 24.92rem; } }
 
 @media screen and (max-width: 576px) {
   .contacts__button {
@@ -689,11 +783,13 @@ sup {
     color: #ffffff;
     text-decoration: none; }
   .hero__content {
-    margin-left: 0; }
+    max-width: 26.5rem;
+    margin: auto; }
   .hero__button {
     display: block;
-    margin-right: 0;
-    margin-bottom: 2rem; }
+    margin-bottom: 2rem;
+    width: 100%;
+    min-height: 51px; }
   .hero__title {
     font-size: 1.9rem;
     max-width: 26.75rem; }
@@ -707,10 +803,3 @@ sup {
   .card__price-tag {
     font-size: 1.25rem;
     min-width: 15.87rem; } }
-
-@media screen and (max-width: 375px) {
-  .hero__button {
-    width: 100%;
-    min-height: 51px; }
-  .hero__text {
-    max-width: 26.5rem; } }

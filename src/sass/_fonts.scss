@@ -2,7 +2,7 @@
   font-family: 'Futura Book';
   src:
   url('../fonts/futura/FuturaBookC.woff') format('woff'),
-  url('../fonts/futura/FuturaBookC.woff2') format('woff');
+  url('../fonts/futura/FuturaBookC.woff2') format('woff2');
   font-weight: normal;
   font-style: normal;
   font-display: swap;
@@ -11,8 +11,18 @@
   font-family: 'Futura Demi';
   src:
   url('../fonts/futura/FuturaDemiC.woff') format('woff'),
-  url('../fonts/futura/FuturaDemiC.woff2') format('woff');
-  font-weight: 100, 200, 300, 400, 500, 600, 700, 800, 900;
+  url('../fonts/futura/FuturaDemiC.woff2') format('woff2');
+  font-weight: normal;
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: 'Futura Medium';
+  src:
+  url('../fonts/futura/FuturaMediumC.woff') format('woff'),
+  url('../fonts/futura/FuturaMediumC.woff') format('woff2');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+  }
+  

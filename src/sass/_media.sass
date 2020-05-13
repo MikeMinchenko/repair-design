@@ -1,15 +1,16 @@
-@media screen and ( max-width: 1220px )
+@media screen and ( max-height: 610px  )
+  .hero
+    &__scroll-down
+      display: none
+@media screen and ( max-width: 1200px )
+  html
+    font-size: 12px
   .contacts
     &__phone
       margin-right: 1.5rem
   .nav
     &__item
       margin-right: 1.5rem
-  html
-    font-size: 12px
-  .hero
-    &__content
-      margin-left: 5.98rem
 @media screen and ( min-width: 992px )
   .menu
     &__logo
@@ -116,11 +117,13 @@
       text-decoration: none
   .hero
     &__content
-      margin-left: 0
+      max-width: 26.5rem
+      margin: auto
     &__button
       display: block
-      margin-right: 0
       margin-bottom: 2rem
+      width: 100%
+      min-height: 51px
     &__title
       font-size: 1.9rem
       max-width: 26.75rem
@@ -137,13 +140,3 @@
     &__price-tag
       font-size: 1.25rem
       min-width: 15.87rem 
-@media screen and ( max-width: 375px)  
-  .hero
-    &__button
-      width: 100%
-      min-height: 51px
-    &__text
-      max-width: 26.5rem
-
-
-    
