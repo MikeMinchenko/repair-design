@@ -12,14 +12,41 @@ sup
   vertical-align: middle
 .section
   padding: 60px 0
+  &--dark
+    background-color: $dark
+    color: $light
   &-title
     text-align: center
     font-family: 'Yeseva One', cursive
+    &__text
+      font-family: 'Futura Book', sans-serif
+      font-size: 1.285rem
+      line-height: 2.07rem
+      max-width: 31.57rem
+      margin-top: 1.5rem
+    &--left
+      text-align: left
     &__heading
       text-transform: uppercase
       font-size: 1.43rem
+      font-weight: normal
       margin-top: 0
       margin-bottom: 1.2rem
+      &--primary
+        color: $primary
+        font-size: 1.928rem
+        line-height: 2.642rem
+        letter-spacing: -0.07em
+        text-transform: uppercase
+    &__word
+      display: flex
+      align-items: center
+      &::after
+          content: ''
+          width: 92px
+          height: 2px
+          background-color: $primary
+          margin-left: 2.428rem
     &__img
       display: flex
       align-items: center

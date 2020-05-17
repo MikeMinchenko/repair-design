@@ -46,6 +46,9 @@
     &__link
       &:hover
         color: lighten($primary, 10)
+  .goTop
+    &:hover
+      background-color: rgba($primary, 0.2)
 @media screen and ( max-width: 992px ) 
   .contacts
     display: flex
@@ -62,6 +65,60 @@
   .menu
     &__logo
       font-size: 1rem
+  .row
+    flex-direction: column
+    align-items: center
+  .types
+    &__card
+      margin-bottom: 6.87rem
+    &__section-title
+      margin-bottom: 3.61rem
+  .design
+    background: $dark
+    &__card
+      margin-bottom: 6.58rem 
+    &__pricetag
+      text-align: center
+    &__section-title
+      color: $light
+    &__section-subtitle
+      color: $light
+      margin: 1.6rem auto 2.9rem auto
+      max-width: 33.92rem
+  .card
+    &__title
+      font-size: 1.25rem 
+    &__text
+      margin-left: 0
+      margin-top: -11.67rem
+      max-width: 22.4rem
+    &__list
+      font-size: 1.08rem
+      line-height: 1.93rem
+      margin-bottom: 1.43rem
+    &__price-tag
+      padding: 1.014rem 1.285rem
+      font-size: 1.25rem
+      min-width: 15.87rem
+      bottom: -1.89rem 
+    &__item
+      &:nth-child(n+8)
+        display: none
+    &__ellipsis
+      &::after
+        content: ' ...'
+  .section
+    .section-subtitle
+      line-height: 1.79rem
+      font-size: 1.25rem
+  .design-img-wrap
+    &::before
+      display: none
+      align-self: center
+  .projects
+    &__row
+      flex-direction: row
+      align-items: start
 @media screen and ( max-width: 768px )
   .nav
     display: none
@@ -70,43 +127,36 @@
       display: none
     &__content
       margin-left: 3.98rem
-  .row
-    flex-direction: column
-    align-items: center
-  .types
-    &__card
-      margin-bottom: 6.58rem
-    &__section-title
-      margin-bottom: 3.61rem
-  .design
-    &__card
-      margin-bottom: 6.58rem 
-  .card
-    &__text
-      margin-left: 0
-      margin-top: -11.27rem
-    &__list
-      font-size: 1.08rem
-      line-height: 1.93rem
-      margin-bottom: 1.43rem
-    &__price-tag
-      padding: 1.014rem 1.285rem
-    &__text-start
-      text-align: center
-    &__overflow
-      max-height: 13.13rem
-      overflow: hidden
-    &__ellipsis
-      &::after
-        content: ' ...'
+  .projects
+    &__row
+      flex-direction: column
+  .col-45
+    width: 100%
+    margin-bottom: 1.8rem
+  .col-55
+    width: 100%
+.projects
+  &__swiper
+    &-container
+      margin-bottom: 1rem
+    &-slide
+      padding-bottom: 1.9rem
+      &__heading
+        font-size: 1.166rem
+        margin-bottom: 0.92rem
+      &__valeu
+        font-size: 1.17rem
+      &__text
+        flex-basis: 47%
+        padding-bottom: 2.75rem
   .section
-    .section-subtitle
-      line-height: 1.79rem
-      font-size: 1.25rem
-  .design
-    &__section-subtitle
-      margin: 1.6rem auto 0 auto
-      max-width: 24.92rem
+    &-title
+      &__text
+        margin-top: 1.9rem
+        max-width: 24.17rem
+        font-size: 1.066rem
+        line-height: 1.87rem
+        letter-spacing: 0.58px
 @media screen and ( max-width: 576px)
   .contacts
     &__button
@@ -134,18 +184,29 @@
     &-title
       &__heading
         font-size: 1.83rem
-  .card
-    &__title
-      font-size: 1.25rem 
-    &__price-tag
-      font-size: 1.25rem
-      min-width: 15.87rem 
+  .design
+    &__section-subtitle
+      max-width: 24.92rem
 @media screen and ( max-width: 375px)
   .hero
     &__content
       max-width: 100%
+    &__text
+      max-width: 26.4rem
   .modal
     &__button
       align-self: center
+  .projects
+    &-img-wrap
+      max-height: 200px
+    &__section-title
+      margin-bottom: 3.25rem
+  .section
+    &-title
+      &__word
+        &::after
+          display: none
+    
+
    
   

@@ -1,15 +1,28 @@
 .design
+  background: linear-gradient($light 52%, $dark 48%)
   &__section-title
     color: lighten($dark, 1.96)
-    margin-bottom: 3.3rem
   &__section-subtitle
     max-width: 52.92rem
-    color: $dark-light
-    margin: 1.3rem auto 0 auto
-.card
-  &__text-start
-  text-align: left
-  padding-left: 2.4rem
+    color: $dark-light    
+    margin: 1.3rem auto 3.4rem auto
+  &__pricetag
+    text-align: left
+    padding-left: 2.4rem
+.design-img-wrap
+  position: relative
+  &::before
+    content: ''
+    position: absolute
+    width: 100%
+    height: 100%
+    top: 0
+    left: 0
+    background-color: rgba($dark, 0.3)
 
+    
+  
+    
+  
   
     
