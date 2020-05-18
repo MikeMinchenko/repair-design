@@ -135,20 +135,20 @@
     margin-bottom: 1.8rem
   .col-55
     width: 100%
-.projects
-  &__swiper
-    &-container
-      margin-bottom: 1rem
-    &-slide
-      padding-bottom: 1.9rem
-      &__heading
-        font-size: 1.166rem
-        margin-bottom: 0.92rem
-      &__valeu
-        font-size: 1.17rem
-      &__text
-        flex-basis: 47%
-        padding-bottom: 2.75rem
+  .projects
+    &__swiper
+      &-container
+        margin-bottom: 1rem
+      &-slide
+        padding-bottom: 1.9rem
+        &__heading
+          font-size: 1.166rem
+          margin-bottom: 0.92rem
+        &__valeu
+          font-size: 1.17rem
+        &__text
+          flex-basis: 47%
+          padding-bottom: 2.75rem
   .section
     &-title
       &__text
@@ -157,6 +157,29 @@
         font-size: 1.066rem
         line-height: 1.87rem
         letter-spacing: 0.58px
+  .control
+    background-color: $dark
+    &__form
+      max-width: 40.666rem
+    &-text
+      color: $light
+      font-size: 1.166rem
+    &__label
+      font-size: 1.25rem
+      color: rgba($light, 0.5)
+    &__input
+      border-bottom: 1px solid rgba($light, 0.7)
+      &::placeholder
+        color: $light
+    &__policy
+      margin-bottom: 4.416rem
+      &-label
+        color: $light
+    &__button
+      order: 1
+      display: block
+      margin: auto
+
 @media screen and ( max-width: 576px)
   .contacts
     &__button
@@ -187,6 +210,35 @@
   .design
     &__section-subtitle
       max-width: 24.92rem
+  .control
+    &__video
+      min-height: 300px
+    &-text
+      max-width: 340px
+    &__form
+      flex-direction: column
+      max-width: 340px
+    &__input-group
+      flex-basis: auto
+      margin-bottom: 5.1rem
+      &:nth-child(2)
+        margin-bottom: 1rem
+    &__input
+      font-size: 1.5rem
+      color: $light
+    &__policy
+      flex-direction: column
+      align-items: flex-start
+      margin-top: 0.274rem
+      margin-bottom: 5.116rem
+      &-label
+        font-size: 1.333rem
+    &__button
+      width: 340px
+      font-size: 1.271rem
+
+
+
 @media screen and ( max-width: 375px)
   .hero
     &__content
@@ -206,7 +258,24 @@
       &__word
         &::after
           display: none
-    
+  .control
+    &__button
+      width: 100%
+      height: 51px
+      margin-bottom: -85px
+    &__section
+      &-title
+        margin-top: -28.7rem
+        margin-bottom: 3.714rem
+    &__video
+      min-height: 206.8px
+      margin-bottom: 2.371rem
+    &-text
+      line-height: 2.066rem
+      margin-bottom: 2.58rem
+      &::before
+        margin-bottom: 1rem
+
 
    
   

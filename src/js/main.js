@@ -45,7 +45,7 @@ $(document).ready(function () {
   });
   // инициализация слайдера
   var mySwiper = new Swiper ('.projects__swiper-container', {
-    loop: true,
+    loop:true,
     pagination: {
       el: '.projects__swiper-pagination',
       type: 'bullets',
@@ -56,99 +56,104 @@ $(document).ready(function () {
     },
   });
 
-  var stepsSwiperTop = new Swiper ('.steps__swiperTop-container', {
-    loop: true,
+  var projectNext = $('.projects__swiper-button-next');
+  var projectPrev = $('.projects__swiper-button-prev');
+  var projectBullets = $('.swiper-pagination');
+
+  projectNext.css('left', projectPrev.width() + 23 + projectBullets.width() + 23);
+  projectBullets.css('left', projectPrev.width() + 23);
+
+  //слайдеры блока 6 шагов
+  var stepsSwiperImg = new Swiper ('.steps__swiperImg-container', {
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true
+    },
     pagination: {
-      el: '.steps__swiperTop-pagination',
+      el: '.steps__swiperImg-pagination',
       type: 'fraction',
       renderFraction: function (currentClass, totalClass) {
         return '<span class="' + currentClass + '"></span>' +
-        ' / ' +
-        '<span class="' + totalClass + '"></span>'
-      }
+            '/' +
+            '<span class="' + totalClass + '"></span>'
+      },
     },
-    
+
     navigation: {
-      nextEl: '.steps__swiper1-button-next',
-      prevEl: '.steps__swiper1-button-prev',
+      nextEl: '.steps__swiperText-button-next',
+      prevEl: '.steps__swiperText-button-prev',
     },
   });
-  
-  var stepsSwiper1 = new Swiper ('.steps__swiper1-container', {
-    loop: true,
+
+
+  var stepsSwiperText = new Swiper ('.steps__swiperText-container', {
+    effect: 'fade',
+    fadeEffect: {
+      crossFade: true
+    },
     pagination: {
-      el: '.steps__swiper1-pagination',
+      el: '.steps__swiperText-pagination',
       type: 'bullets',
     },
-    navigation: {
-      nextEl: '.steps__swiper1-button-next',
-      prevEl: '.steps__swiper1-button-prev',
-    },
-    
   });
 
-  var stepsSwiper2 = new Swiper ('.steps__swiper2-container', {
-    loop: true,
-    navigation: {
-      nextEl: '.steps__swiper1-button-next',
-      prevEl: '.steps__swiper1-button-prev',
-    },
-   
-    
-    
-  });
+  var stepsNext = $('.steps__swiperText-button-next');
+  var stepsPrev = $('.steps__swiperText-button-prev');
+  var stepsBullets = $('.steps__swiperText-pagination');
 
+  stepsNext.css('left', stepsPrev.width() + 23 + stepsBullets.width() + 23);
+  stepsBullets.css('left', stepsPrev.width() + 23);
+
+  stepsSwiperImg.controller.control = stepsSwiperText;
+  stepsSwiperText.controller.control = stepsSwiperImg;
+
+
+  $(".steps-button-0").click(function () {
+    stepsSwiperImg.slideTo(0);
+  });
+  $(".steps-button-1").click(function () {
+    stepsSwiperImg.slideTo(1);
+  });
+  $(".steps-button-2").click(function () {
+    stepsSwiperImg.slideTo(2);
+  });
+  $(".steps-button-3").click(function () {
+    stepsSwiperImg.slideTo(3);
+  });
+  $(".steps-button-4").click(function () {
+    stepsSwiperImg.slideTo(4);
+  });
+  $(".steps-button-5").click(function () {
+    stepsSwiperImg.slideTo(5);
+  });
   
 
-  var next = $('.swiper-button-next');
-  var prev = $('.swiper-button-prev');
-  var bullets = $('.swiper-pagination');
-
-  
-  next.each((index, element) => {
-    var bottonNext = $(element)
-    var bottonPrev = $(prev[index])
-    var swiperBullets = $(bullets[index])
-    var indent = 23
-
-    bottonNext.css('left', bottonPrev.width() + indent + swiperBullets.width() + indent)
-    swiperBullets.css('left', bottonPrev.width() + indent)
-  });
-  
-  $("#steps-button-0").click(function () {
-    stepsSwiper2.slideTo(1) + stepsSwiper1.slideTo(1) + stepsSwiperTop.slideTo(1); 
-  });
-  $("#steps-button-1").click(function () {
-    stepsSwiper2.slideTo(2) + stepsSwiper1.slideTo(2) + stepsSwiperTop.slideTo(2);
-  });
-  $("#steps-button-2").click(function () {
-    stepsSwiper2.slideTo(3) + stepsSwiper1.slideTo(3) + stepsSwiperTop.slideTo(3);
-  });
-  $("#steps-button-3").click(function () {
-    stepsSwiper2.slideTo(4) + stepsSwiper1.slideTo(4) + stepsSwiperTop.slideTo(4);
-  });
-  $("#steps-button-4").click(function () {
-    stepsSwiper2.slideTo(5) + stepsSwiper1.slideTo(5) + stepsSwiperTop.slideTo(5);
-  });
-  $("#steps-button-5").click(function () {
-    stepsSwiper2.slideTo(6) + stepsSwiper1.slideTo(6) + stepsSwiperTop.slideTo(6);
-  });
-  
-  // $(document).on('click', function (event) {
-    // console.log(event);
+  stepsSwiperImg.on('slideChange', function () {
     
-  // });
+    var activeSlide = ('.steps-button-' + stepsSwiperImg.realIndex);
+    var prevSlide = ('.steps-button-' + stepsSwiperImg.previousIndex);
 
-  stepsSwiper2.on('slideChange', function (event) {
-    
-    var activeSlide = ('#steps-button-' + stepsSwiper2.realIndex);
-    var prevSlide = ('#steps-button-' + stepsSwiper2.previousIndex);
-    
-    // $(activeSlide).removeClass('inactive');
-    // $(prevSlide).addClass('inactive');
-    console.log(activeSlide);
-    console.log(prevSlide);
+    $(activeSlide).removeClass('shadow');
+    $(prevSlide).addClass('shadow');
+
   });
+
+  var wow = new WOW(
+      {
+        boxClass:     'wow',      // animated element css class (default is wow)
+        animateClass: 'animate__animated', // animation css class (default is animated)
+        offset:       0,          // distance to the element when triggering the animation (default is 0)
+        mobile:       true,       // trigger animations on mobile devices (default is true)
+        live:         true,       // act on asynchronously loaded content (default is true)
+        callback:     function(box) {
+          // the callback is fired every time an animation is started
+          // the argument that is passed in is the DOM node being animated
+        },
+        scrollContainer: null,    // optional scroll container selector, otherwise use window,
+        resetAnimation: true,     // reset animation on end (default is true)
+      }
+  );
+  wow.init();
   
 });
   
@@ -160,8 +165,6 @@ $(document).ready(function () {
 
 
 
-  // stepsSwiper3.on('slideChange', function () {
-  //   stepsSwiper1.slideTo(stepsSwiper3.activeIndex)
-  // });
+
   
 
