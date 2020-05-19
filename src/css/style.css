@@ -946,7 +946,7 @@ sup {
   .modal__dialog {
     position: relative;
     max-width: 36.35rem;
-    background: #131313 url("../img/modal/bg.svg") no-repeat center;
+    background: #131313 url("../img/modal/bg.svg") no-repeat center/cover;
     padding: 2.357rem 3.5rem 1.928rem;
     color: #ffffff; }
   .modal__close {
@@ -973,10 +973,13 @@ sup {
   .modal__input {
     font-family: "Futura Medium", sans-serif;
     font-weight: normal;
-    color: #ffffff;
-    margin-bottom: 3.428rem; }
-    .modal__input:last-of-type {
-      margin-bottom: 0; }
+    color: #ffffff; }
+    .modal__input-group {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 3.428rem; }
+      .modal__input-group:last-of-type {
+        margin-bottom: 0; }
   .modal__policy {
     margin-bottom: 2.785rem; }
   .modal__button {
@@ -984,6 +987,13 @@ sup {
     padding: 1.18rem 1.571rem;
     width: 15.2rem;
     margin-right: 0.2rem; }
+
+div.invalid {
+  color: #e3b873;
+  margin-top: 2px; }
+
+input.invalid {
+  border-bottom: 1px solid #e3b873; }
 
 .modal {
   opacity: 0;
@@ -1006,7 +1016,7 @@ sup {
   .modal__dialog {
     position: relative;
     max-width: 36.35rem;
-    background: #131313 url("../img/modal/bg.svg") no-repeat center;
+    background: #131313 url("../img/modal/bg.svg") no-repeat center/cover;
     padding: 2.357rem 3.5rem 1.928rem;
     color: #ffffff; }
   .modal__close {
@@ -1033,10 +1043,13 @@ sup {
   .modal__input {
     font-family: "Futura Medium", sans-serif;
     font-weight: normal;
-    color: #ffffff;
-    margin-bottom: 3.428rem; }
-    .modal__input:last-of-type {
-      margin-bottom: 0; }
+    color: #ffffff; }
+    .modal__input-group {
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 3.428rem; }
+      .modal__input-group:last-of-type {
+        margin-bottom: 0; }
   .modal__policy {
     margin-bottom: 2.785rem; }
   .modal__button {
@@ -1044,6 +1057,13 @@ sup {
     padding: 1.18rem 1.571rem;
     width: 15.2rem;
     margin-right: 0.2rem; }
+
+div.invalid {
+  color: #e3b873;
+  margin-top: 2px; }
+
+input.invalid {
+  border-bottom: 1px solid #e3b873; }
 
 .footer {
   background: #131313 url("../img/footer/footer-bg.jpg") no-repeat center/cover; }
@@ -1088,6 +1108,9 @@ sup {
     min-width: 200px;
     font-size: 15px;
     outline-color: #ffffff; }
+  .footer-menu {
+    background-color: #131313;
+    padding: 3.685rem 0; }
 
 @media screen and (max-height: 610px) {
   .hero__scroll-down {
@@ -1348,4 +1371,6 @@ sup {
     .control-text::before {
       margin-bottom: 1rem; }
   .footer__button {
-    width: 100%; } }
+    width: 100%; }
+  .footer-menu {
+    display: none; } }
