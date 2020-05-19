@@ -350,16 +350,18 @@ template {
   width: 70%; }
 
 .button {
-  font-family: 'Futura Demi', sans-serif;
+  font-family: "Futura Demi", sans-serif;
   padding: 11px 20px;
   border: 1px solid #e3b873;
   border-radius: 2px;
   text-transform: uppercase;
   font-size: 13px; }
+  .button:hover {
+    cursor: pointer; }
   .button--primary {
     background-color: #e3b873;
     color: #ffffff;
-    box-shadow: 0px 5px 15px rgba(227, 184, 115, 0.4);
+    box-shadow: 0 5px 15px rgba(227, 184, 115, 0.4);
     transition: box-shadow 0.3s;
     outline-color: #ffffff; }
   .button--outline {
@@ -370,7 +372,7 @@ template {
     transition: box-shadow 0.3s; }
 
 .label {
-  font-size: 1.07rem; }
+  font-size: 15px; }
   .label--light {
     color: rgba(255, 255, 255, 0.5); }
 
@@ -378,10 +380,11 @@ template {
   border: none;
   background-color: transparent;
   outline-color: #e3b873;
-  font-size: 1.28rem;
+  font-size: 18px;
   padding: 0.4rem 0 0.5rem; }
   .input--light {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.15); }
+    border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+    color: #ffffff; }
     .input--light::placeholder {
       color: #ffffff; }
 
@@ -394,7 +397,7 @@ template {
 .policy__label {
   display: flex;
   align-items: center;
-  font-size: 1.142rem; }
+  font-size: 16px; }
   .policy__label::before {
     content: '';
     width: 18px;
@@ -416,8 +419,10 @@ template {
   text-decoration: none;
   border: 2px solid #e3b873;
   border-radius: 50%;
+  display: none;
   background: url("../img/arrow-top.svg") no-repeat center;
-  transition: background-color 0.4s; }
+  transition: background-color 0.4s;
+  z-index: 100; }
 
 *, *:before, *:after {
   box-sizing: border-box; }
@@ -426,7 +431,7 @@ html {
   font-size: 14px; }
 
 body {
-  font-family: 'Futura Book', sans-serif;
+  font-family: "Futura Book", sans-serif;
   font-size: 1rem; }
 
 img {
@@ -443,11 +448,11 @@ sup {
     color: #ffffff; }
   .section-title {
     text-align: center;
-    font-family: 'Yeseva One', cursive; }
+    font-family: "Yeseva One", cursive; }
     .section-title--light {
       color: #ffffff; }
     .section-title__text {
-      font-family: 'Futura Book', sans-serif;
+      font-family: "Futura Book", sans-serif;
       font-size: 1.285rem;
       line-height: 2.07rem;
       max-width: 31.57rem;
@@ -489,7 +494,7 @@ sup {
     font-size: 1.43rem;
     line-height: 1.93rem;
     text-align: center;
-    font-family: 'Futura Book'; }
+    font-family: "Futura Book", sans-serif; }
 
 .header {
   position: fixed;
@@ -508,7 +513,7 @@ sup {
     transition: color 0.3s; }
 
 .logo {
-  font-family: 'Futura Demi';
+  font-family: "Futura Demi", sans-serif;
   font-weight: normal;
   font-size: 1rem;
   color: #e3b873;
@@ -525,7 +530,7 @@ sup {
   outline-color: #e3b873; }
 
 .phone {
-  font-family: 'Futura Demi';
+  font-family: "Futura Demi", sans-serif;
   font-weight: normal;
   color: #e3b873; }
 
@@ -583,7 +588,7 @@ sup {
     padding: 1.28rem 0;
     margin-right: 1.12rem; }
   .hero__scroll-down {
-    font-family: Yeseva One, sans-serif;
+    font-family: "Yeseva One", cursive;
     position: absolute;
     left: 0;
     bottom: 0;
@@ -610,7 +615,7 @@ sup {
       background: url("../img/arrow-down.svg") no-repeat center; }
 
 .instagram {
-  font-family: 'Futura Demi', sans-serif;
+  font-family: "Futura Demi", sans-serif;
   background-color: #131313;
   display: flex;
   justify-content: center;
@@ -635,7 +640,7 @@ sup {
       background-color: #e3b873; }
 
 .title {
-  font-family: 'Yeseva One', cursive;
+  font-family: "Yeseva One", cursive;
   text-transform: uppercase;
   font-size: 2.84rem;
   font-weight: 400; }
@@ -648,14 +653,16 @@ sup {
     margin-bottom: 3.45rem; }
   .projects-img-wrap {
     max-height: 486px;
-    width: 100%; }
+    width: 100%;
+    margin: 0 5px; }
   .projects__swiper-slide {
     display: flex;
     flex-wrap: wrap;
     padding-bottom: 4.3rem; }
     .projects__swiper-slide__text {
       flex-basis: 34%;
-      padding-bottom: 2.95rem; }
+      padding-bottom: 2.95rem;
+      min-width: 144px; }
     .projects__swiper-slide__heading {
       margin: 0;
       margin-bottom: 0.62rem;
@@ -664,7 +671,7 @@ sup {
       font-size: 1.285rem;
       text-transform: uppercase;
       color: #e3b873; }
-    .projects__swiper-slide__valeu {
+    .projects__swiper-slide__value {
       font-size: 1.071rem;
       line-height: 1.428rem; }
 
@@ -675,12 +682,13 @@ sup {
     margin: 0 8.94px; }
 
 .swiper-slide__img {
-  height: 100%;
   width: 100%;
+  height: 100%;
   object-fit: cover; }
 
 .swiper-pagination-bullet {
-  background-color: rgba(255, 255, 255, 0.3); }
+  background-color: rgba(255, 255, 255, 0.3);
+  opacity: 1; }
   .swiper-pagination-bullet-active {
     background-color: #ffffff; }
 
@@ -688,7 +696,8 @@ sup {
   bottom: 0;
   top: auto;
   width: 42px;
-  height: 14px; }
+  height: 14px;
+  outline-color: #e3b873; }
   .swiper-button-prev::after, .swiper-button-next::after {
     display: none; }
 
@@ -770,8 +779,10 @@ sup {
   margin-top: 2.674rem; }
 
 .control__button {
-  width: 200px;
-  font-size: 1.071rem; }
+  padding: 16px 10px;
+  min-width: 200px;
+  font-size: 15px;
+  outline-color: #ffffff; }
 
 .video__play {
   position: relative;
@@ -798,7 +809,7 @@ sup {
   box-shadow: 10px 10px 20px rgba(0, 0, 0, 0.03); }
 
 .card__title {
-  font-family: 'Yeseva One', cursive;
+  font-family: "Yeseva One", cursive;
   font-size: 1.29rem;
   font-weight: normal;
   color: #363636;
@@ -806,7 +817,7 @@ sup {
   margin-bottom: 0.5rem; }
 
 .card__list {
-  font-family: 'Futura Book';
+  font-family: "Futura Book", sans-serif;
   font-size: 1.07rem;
   line-height: 1.83rem;
   color: #959595;
@@ -819,7 +830,7 @@ sup {
   left: 0;
   bottom: -1.79rem;
   min-width: 16.29rem;
-  font-family: 'Yeseva One', cursive;
+  font-family: "Yeseva One", cursive;
   font-size: 1.29rem;
   font-weight: normal;
   text-align: center;
@@ -909,7 +920,7 @@ sup {
     line-height: 1.5rem;
     text-transform: uppercase;
     border-bottom: 1px solid #e3b873; }
-  .steps-wrap__valeu {
+  .steps-wrap__value {
     font-weight: normal;
     font-size: 1.071rem;
     line-height: 1.285rem; }
@@ -949,7 +960,7 @@ sup {
     margin: 12px;
     cursor: pointer; }
   .modal__title {
-    font-family: 'Yeseva One', cursive;
+    font-family: "Yeseva One", cursive;
     font-size: 1.357rem;
     line-height: 1.967rem;
     text-align: center;
@@ -960,7 +971,7 @@ sup {
     display: flex;
     flex-direction: column; }
   .modal__input {
-    font-family: 'Futura Medium', sans-serif;
+    font-family: "Futura Medium", sans-serif;
     font-weight: normal;
     color: #ffffff;
     margin-bottom: 3.428rem; }
@@ -974,8 +985,114 @@ sup {
     width: 15.2rem;
     margin-right: 0.2rem; }
 
+.modal {
+  opacity: 0;
+  visibility: hidden;
+  position: fixed;
+  z-index: 199;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(19, 19, 19, 0.6);
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+  .modal--visible {
+    opacity: 1;
+    visibility: visible; }
+  .modal__dialog {
+    position: relative;
+    max-width: 36.35rem;
+    background: #131313 url("../img/modal/bg.svg") no-repeat center;
+    padding: 2.357rem 3.5rem 1.928rem;
+    color: #ffffff; }
+  .modal__close {
+    position: absolute;
+    right: 0;
+    top: 0;
+    border: none;
+    width: 28px;
+    height: 28px;
+    background: transparent url("../img/modal/exit.svg") no-repeat center;
+    margin: 12px;
+    cursor: pointer; }
+  .modal__title {
+    font-family: "Yeseva One", cursive;
+    font-size: 1.357rem;
+    line-height: 1.967rem;
+    text-align: center;
+    margin: 0;
+    margin-bottom: 2.028rem;
+    font-weight: normal; }
+  .modal__form {
+    display: flex;
+    flex-direction: column; }
+  .modal__input {
+    font-family: "Futura Medium", sans-serif;
+    font-weight: normal;
+    color: #ffffff;
+    margin-bottom: 3.428rem; }
+    .modal__input:last-of-type {
+      margin-bottom: 0; }
+  .modal__policy {
+    margin-bottom: 2.785rem; }
+  .modal__button {
+    align-self: flex-end;
+    padding: 1.18rem 1.571rem;
+    width: 15.2rem;
+    margin-right: 0.2rem; }
+
+.footer {
+  background: #131313 url("../img/footer/footer-bg.jpg") no-repeat center/cover; }
+  .footer-wrap {
+    background: #181818 url("../img/footer/footer-modal-bg.svg") no-repeat center/cover;
+    max-width: 63.07rem;
+    margin: auto;
+    padding: 2.5rem; }
+  .footer__form {
+    max-width: 37.142rem;
+    margin: auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap; }
+  .footer__title {
+    text-align: center;
+    margin: 0;
+    font-family: "Yeseva One", cursive;
+    font-weight: normal;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #ffffff;
+    margin-bottom: 3.314rem; }
+  .footer__input-group {
+    display: flex;
+    flex-direction: column;
+    width: 44%;
+    margin-bottom: 3.082rem; }
+    .footer__input-group--full-width {
+      width: 100%;
+      margin-bottom: 3.182rem; }
+  .footer__policy {
+    color: #ffffff;
+    min-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 3.603rem; }
+  .footer__button {
+    margin: auto;
+    padding: 16px 10px;
+    min-width: 200px;
+    font-size: 15px;
+    outline-color: #ffffff; }
+
 @media screen and (max-height: 610px) {
   .hero__scroll-down {
+    display: none; }
+  .hero::after {
     display: none; } }
 
 @media screen and (max-width: 1200px) {
@@ -994,8 +1111,6 @@ sup {
   .contacts__phone:hover {
     text-decoration: none;
     color: #ffffff; }
-  .button:hover {
-    cursor: pointer; }
   .button--primary {
     transition: box-shadow 0.3s; }
     .button--primary:hover {
@@ -1022,6 +1137,8 @@ sup {
   .nav {
     display: none; }
   .hero__scroll-down {
+    display: none; }
+  .hero::after {
     display: none; }
   html {
     font-size: 12px; }
@@ -1068,6 +1185,8 @@ sup {
   .section .section-subtitle {
     line-height: 1.79rem;
     font-size: 1.25rem; }
+  .section-title__text {
+    max-width: 24.17rem; }
   .design-img-wrap::before {
     display: none;
     align-self: center; }
@@ -1096,17 +1215,11 @@ sup {
     .projects__swiper-slide__heading {
       font-size: 1.166rem;
       margin-bottom: 0.92rem; }
-    .projects__swiper-slide__valeu {
+    .projects__swiper-slide__value {
       font-size: 1.17rem; }
     .projects__swiper-slide__text {
       flex-basis: 47%;
       padding-bottom: 2.75rem; }
-  .section-title__text {
-    margin-top: 1.9rem;
-    max-width: 24.17rem;
-    font-size: 1.066rem;
-    line-height: 1.87rem;
-    letter-spacing: 0.58px; }
   .control {
     background-color: #131313; }
     .control__form {
@@ -1153,6 +1266,11 @@ sup {
     margin-bottom: 2.7rem; }
   .section-title__heading {
     font-size: 1.83rem; }
+  .section-title__text {
+    margin-top: 1.9rem;
+    font-size: 1.066rem;
+    line-height: 1.87rem;
+    letter-spacing: 0.58px; }
   .design__section-subtitle {
     max-width: 24.92rem; }
   .control__video {
@@ -1177,9 +1295,27 @@ sup {
     margin-bottom: 5.116rem; }
     .control__policy-label {
       font-size: 1.333rem; }
-  .control__button {
-    width: 340px;
-    font-size: 1.271rem; } }
+  .footer {
+    background-image: none; }
+    .footer-wrap {
+      background-image: none;
+      background-color: #131313;
+      max-width: 340px;
+      padding: 0; }
+    .footer__form {
+      width: 100%;
+      flex-direction: column; }
+    .footer__title {
+      margin-bottom: 4.214rem; }
+    .footer__input-group {
+      width: 100%;
+      margin-bottom: 5.082rem; }
+      .footer__input-group:nth-child(3) {
+        margin-bottom: 0.582rem; }
+    .footer__policy {
+      flex-direction: column;
+      align-items: flex-start;
+      margin-bottom: 5.603rem; } }
 
 @media screen and (max-width: 375px) {
   .hero__content {
@@ -1188,10 +1324,12 @@ sup {
     max-width: 26.4rem; }
   .modal__button {
     align-self: center; }
-  .projects-img-wrap {
-    max-height: 200px; }
-  .projects__section-title {
-    margin-bottom: 3.25rem; }
+  .projects {
+    padding-top: 33px; }
+    .projects-img-wrap {
+      max-height: 200px; }
+    .projects__section-title {
+      margin-bottom: 3.25rem; }
   .section-title__word::after {
     display: none; }
   .control__button {
@@ -1208,4 +1346,6 @@ sup {
     line-height: 2.066rem;
     margin-bottom: 2.58rem; }
     .control-text::before {
-      margin-bottom: 1rem; } }
+      margin-bottom: 1rem; }
+  .footer__button {
+    width: 100%; } }

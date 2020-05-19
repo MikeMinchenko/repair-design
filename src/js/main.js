@@ -38,6 +38,7 @@ $(document).ready(function () {
         $('.goTop').fadeIn();
     }
   });
+
   // to top по клику
   $('.goTop').click(function(){
       $('html, body').animate({scrollTop : 0},800);
@@ -45,6 +46,7 @@ $(document).ready(function () {
   });
   // инициализация слайдера
   var mySwiper = new Swiper ('.projects__swiper-container', {
+
     loop:true,
     pagination: {
       el: '.projects__swiper-pagination',
@@ -154,6 +156,22 @@ $(document).ready(function () {
       }
   );
   wow.init();
+
+  $(window).width(function(){
+    if ($(this).width() < 576) {
+      $('.policy__label--mobile').text('Я соглашаюсь на обработку данных');
+    } else {
+      $('.policy__label--mobile').text('Я соглашаюсь c обработкой данных');
+    }
+  });
+
+  $(window).resize(function(){
+    if ($(this).width() < 576) {
+      $('.policy__label--mobile').text('Я соглашаюсь на обработку данных');
+    } else {
+      $('.policy__label--mobile').text('Я соглашаюсь c обработкой данных');
+    }
+  });
   
 });
   

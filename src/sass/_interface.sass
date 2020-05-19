@@ -1,14 +1,16 @@
 .button
-  font-family: 'Futura Demi', sans-serif
+  font-family: $fdemi
   padding: 11px 20px
   border: 1px solid $primary
   border-radius: 2px
   text-transform: uppercase
   font-size: 13px
+  &:hover
+    cursor: pointer
   &--primary
     background-color: $primary
     color: $light
-    box-shadow: 0px 5px 15px rgba($primary, 0.4)
+    box-shadow: 0 5px 15px rgba($primary, 0.4)
     transition: box-shadow 0.3s 
     outline-color: $light
   &--outline
@@ -18,17 +20,18 @@
     outline-color: $primary 
     transition: box-shadow 0.3s 
 .label
-  font-size: 1.07rem
+  font-size: 15px
   &--light
     color: rgba($light, 0.5) 
 .input
   border: none
   background-color: transparent
   outline-color: $primary
-  font-size: 1.28rem
+  font-size: 18px
   padding: 0.4rem 0 0.5rem
   &--light
     border-bottom: 1px solid rgba($light, 0.15)
+    color: $light
     &::placeholder
       color: $light
 .policy
@@ -42,7 +45,7 @@
   &__label
     display: flex
     align-items: center
-    font-size: 1.142rem
+    font-size: 16px
     &::before
       content: ''
       width: 18px
@@ -63,8 +66,9 @@
   text-decoration: none
   border: 2px solid $primary
   border-radius: 50%
-  display:none
+  display: none
   background: url('../img/arrow-top.svg') no-repeat center
   transition: background-color 0.4s
+  z-index: 100
   
 
