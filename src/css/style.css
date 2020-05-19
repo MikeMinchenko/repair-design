@@ -866,134 +866,149 @@ sup {
 .shadow {
   color: #959595; }
 
-.steps__subtitle {
-  font-family: "Futura Demi", sans-serif;
-  font-weight: normal;
-  font-size: 1.071rem;
-  text-transform: uppercase; }
+.steps {
+  padding-bottom: 33.3rem; }
+  .steps__subtitle {
+    font-family: "Futura Demi", sans-serif;
+    font-weight: normal;
+    font-size: 1.071rem;
+    text-transform: uppercase; }
+  .steps__heading {
+    font-family: "Yeseva One", cursive;
+    font-weight: normal;
+    font-size: 1.928rem;
+    line-height: 2.642rem;
+    text-transform: uppercase; }
+  .steps__word::after {
+    width: 92px;
+    height: 1px;
+    background-color: #e3b873; }
+  .steps__swiperImg-pagination {
+    font-family: "Yeseva One", cursive;
+    font-weight: normal;
+    font-size: 1.285rem;
+    text-transform: uppercase; }
+  .steps-slide__heading {
+    margin: 0;
+    font-family: "Yeseva One", cursive;
+    font-weight: normal;
+    font-size: 1.071rem;
+    line-height: 1.642rem;
+    text-transform: uppercase;
+    color: #e3b873; }
+  .steps-slide__text {
+    margin: 0;
+    font-family: "Futura Book", sans-serif;
+    font-weight: normal;
+    font-size: 1.071rem;
+    line-height: 1.785rem; }
+  .steps-wrap {
+    display: flex;
+    justify-content: space-between;
+    margin: auto; }
+    .steps-wrap__text {
+      max-width: 136px; }
+    .steps-wrap__heading {
+      display: inline-block;
+      font-family: "Yeseva One", cursive;
+      font-weight: normal;
+      font-size: 1.071rem;
+      line-height: 1.5rem;
+      text-transform: uppercase;
+      border-bottom: 1px solid #e3b873; }
+    .steps-wrap__value {
+      font-weight: normal;
+      font-size: 1.071rem;
+      line-height: 1.285rem; }
 
-.steps__heading {
-  font-family: "Yeseva One", cursive;
-  font-weight: normal;
-  font-size: 1.928rem;
-  line-height: 2.642rem;
-  text-transform: uppercase; }
+.team__container {
+  max-width: 1028px; }
 
-.steps__word::after {
-  width: 92px;
-  height: 1px;
-  background-color: #e3b873; }
+.team__section-title {
+  color: #ffffff;
+  margin-top: -33.3rem;
+  margin-bottom: 1.3rem; }
 
-.steps__swiperImg-pagination {
-  font-family: "Yeseva One", cursive;
-  font-weight: normal;
-  font-size: 1.285rem;
-  text-transform: uppercase; }
+.team__section-subtitle {
+  color: #ffffff;
+  max-width: 32rem;
+  margin: auto;
+  margin-bottom: 5.8rem; }
 
-.steps-slide__heading {
-  margin: 0;
-  font-family: "Yeseva One", cursive;
-  font-weight: normal;
-  font-size: 1.071rem;
-  line-height: 1.642rem;
-  text-transform: uppercase;
-  color: #e3b873; }
-
-.steps-slide__text {
-  margin: 0;
-  font-family: "Futura Book", sans-serif;
-  font-weight: normal;
-  font-size: 1.071rem;
-  line-height: 1.785rem; }
-
-.steps-wrap {
+.team__wrap {
   display: flex;
   justify-content: space-between;
-  margin: auto; }
-  .steps-wrap__text {
-    max-width: 136px; }
-  .steps-wrap__heading {
-    display: inline-block;
-    font-family: "Yeseva One", cursive;
-    font-weight: normal;
-    font-size: 1.071rem;
-    line-height: 1.5rem;
-    text-transform: uppercase;
-    border-bottom: 1px solid #e3b873; }
-  .steps-wrap__value {
-    font-weight: normal;
-    font-size: 1.071rem;
-    line-height: 1.285rem; }
+  margin-bottom: 3.9rem; }
 
-.modal {
-  opacity: 0;
-  visibility: hidden;
-  position: fixed;
-  z-index: 199;
-  left: 0;
-  top: 0;
-  bottom: 0;
-  right: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(19, 19, 19, 0.6);
-  display: flex;
-  align-items: center;
-  justify-content: center; }
-  .modal--visible {
-    opacity: 1;
-    visibility: visible; }
-  .modal__dialog {
+.team-card {
+  position: relative;
+  max-width: 272px;
+  min-height: 357px; }
+  .team-card__text {
     position: relative;
-    max-width: 36.35rem;
-    background: #131313 url("../img/modal/bg.svg") no-repeat center/cover;
-    padding: 2.357rem 3.5rem 1.928rem;
-    color: #ffffff; }
-  .modal__close {
-    position: absolute;
-    right: 0;
-    top: 0;
-    border: none;
-    width: 28px;
-    height: 28px;
-    background: transparent url("../img/modal/exit.svg") no-repeat center;
-    margin: 12px;
-    cursor: pointer; }
-  .modal__title {
-    font-family: "Yeseva One", cursive;
-    font-size: 1.357rem;
-    line-height: 1.967rem;
+    max-width: 233px;
+    margin: auto;
     text-align: center;
+    background-color: #ffffff;
+    box-shadow: 0 10px 15px rgba(19, 19, 19, 0.05);
+    padding-top: 22px;
+    margin-top: -81px; }
+  .team-card__title {
     margin: 0;
-    margin-bottom: 2.028rem;
-    font-weight: normal; }
-  .modal__form {
-    display: flex;
-    flex-direction: column; }
-  .modal__input {
-    font-family: "Futura Medium", sans-serif;
+    font-family: "Yeseva One", cursive;
     font-weight: normal;
-    color: #ffffff; }
-    .modal__input-group {
-      display: flex;
-      flex-direction: column;
-      margin-bottom: 3.428rem; }
-      .modal__input-group:last-of-type {
-        margin-bottom: 0; }
-  .modal__policy {
-    margin-bottom: 2.785rem; }
-  .modal__button {
-    align-self: flex-end;
-    padding: 1.18rem 1.571rem;
-    width: 15.2rem;
-    margin-right: 0.2rem; }
+    font-size: 18px;
+    color: #181818;
+    margin-bottom: 8px; }
+  .team-card__subtitle {
+    display: block;
+    font-weight: normal;
+    font-size: 18px;
+    color: #959595;
+    margin-bottom: 24px; }
+  .team-card__experience {
+    display: block;
+    font-family: "Yeseva One", cursive;
+    font-weight: normal;
+    font-size: 13px;
+    text-transform: uppercase;
+    background-color: #e3b873;
+    color: #ffffff;
+    padding: 14px 5px; }
+  .team-card__sticker {
+    width: 70px;
+    height: 70px;
+    background-color: #e3b873;
+    box-shadow: 0 5px 20px rgba(227, 184, 115, 0.5);
+    position: absolute;
+    top: -35px;
+    left: -35px;
+    display: flex;
+    justify-content: center;
+    align-items: center; }
 
-div.invalid {
-  color: #e3b873;
-  margin-top: 2px; }
+.team__img {
+  width: 100%;
+  object-fit: cover;
+  display: block; }
 
-input.invalid {
-  border-bottom: 1px solid #e3b873; }
+.team-text {
+  margin: 0 auto;
+  max-width: 40.685rem;
+  font-weight: normal;
+  font-size: 1.428rem;
+  line-height: 2.428rem;
+  text-align: center;
+  margin-bottom: 4.38rem; }
+  .team-text::before {
+    content: '';
+    display: block;
+    margin: auto;
+    margin-bottom: 0.6rem;
+    width: 55px;
+    height: 2px;
+    border-radius: 30px;
+    background-color: #e3b873; }
 
 .modal {
   opacity: 0;
