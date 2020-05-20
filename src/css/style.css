@@ -1099,7 +1099,8 @@ input.invalid {
     background: #181818 url("../img/footer/footer-modal-bg.svg") no-repeat center/cover;
     max-width: 63.07rem;
     margin: auto;
-    padding: 2.5rem; }
+    padding: 2.5rem;
+    margin-bottom: 3.514rem; }
   .footer__form {
     max-width: 37.142rem;
     margin: auto;
@@ -1138,7 +1139,35 @@ input.invalid {
     outline-color: #ffffff; }
   .footer-menu {
     background-color: #131313;
-    padding: 3.685rem 0; }
+    padding: 3.285rem 0; }
+  .footer__address {
+    display: flex;
+    flex-direction: column;
+    max-width: 66.071rem;
+    margin: auto; }
+  .footer__heading {
+    font-family: "Yeseva One", cursive;
+    font-weight: normal;
+    font-size: 20px;
+    line-height: 2rem;
+    text-align: center;
+    text-transform: uppercase;
+    color: #e3b873;
+    max-width: 39.071rem;
+    margin: auto;
+    margin-bottom: 1.7rem; }
+  .footer__links {
+    text-align: center; }
+  .footer__mail {
+    text-decoration: none;
+    margin-right: 15px; }
+  .footer__inst {
+    text-decoration: none; }
+  .footer__map {
+    height: 465px; }
+
+.address__header {
+  margin-bottom: 2.8rem; }
 
 @media screen and (max-height: 610px) {
   .hero__scroll-down {
@@ -1352,7 +1381,8 @@ input.invalid {
       background-image: none;
       background-color: #131313;
       max-width: 340px;
-      padding: 0; }
+      padding: 0;
+      margin-bottom: 3.814rem; }
     .footer__form {
       width: 100%;
       flex-direction: column; }
@@ -1360,13 +1390,27 @@ input.invalid {
       margin-bottom: 4.214rem; }
     .footer__input-group {
       width: 100%;
-      margin-bottom: 5.082rem; }
+      margin-bottom: 4.982rem; }
       .footer__input-group:nth-child(3) {
-        margin-bottom: 0.582rem; }
+        margin-bottom: 0.73rem; }
     .footer__policy {
       flex-direction: column;
       align-items: flex-start;
-      margin-bottom: 5.603rem; } }
+      margin-bottom: 5.603rem; }
+    .footer__map {
+      order: -1;
+      margin-bottom: 3.4rem;
+      height: 254px; }
+    .footer__heading {
+      font-size: 18px;
+      max-width: 27.871rem;
+      line-height: 2.1rem;
+      margin-bottom: 1.9rem; }
+    .footer__links-img {
+      width: 39px;
+      height: 39px; }
+    .footer__mail {
+      margin-right: 18px; } }
 
 @media screen and (max-width: 375px) {
   .hero__content {

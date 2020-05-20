@@ -186,7 +186,7 @@ $(document).ready(function () {
         },
         userPhone: {
           required: true,
-          minlength: 17
+          minlength: 18
         },
         userEmail: {
           required: true,
