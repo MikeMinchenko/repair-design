@@ -29,16 +29,19 @@
   outline-color: $primary
   font-size: 18px
   padding: 0.4rem 0 0.5rem
+  &-group
+    position: relative
   &--light
     border-bottom: 1px solid rgba($light, 0.15)
     color: $light
     &::placeholder
       color: $light
 .policy
+  position: relative
   &__checkbox
     opacity: 0
     visibility: hidden
-    &:checked +
+    &:checked ~
       .policy__label
         &::before
           background: $primary url('../img/modal/check.svg') no-repeat center

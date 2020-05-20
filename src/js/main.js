@@ -174,130 +174,54 @@ $(document).ready(function () {
   });
 
 //  валидация форм
+  $( "form" ).each( function() {
+    $(this).validate({
+      errorElement: "div",
+      errorClass: "invalid",
+      rules: {
+        userName: {
+          required: true,
+          minlength: 2,
+          maxlength: 15
+        },
+        userPhone: {
+          required: true,
+          minlength: 17
+        },
+        userEmail: {
+          required: true,
+          email: true
+        },
+        userQuestion: "required",
+        policyCheckbox: "required"
+      },
+      //сообщения
+      messages: {
+        userName: {
+          required: "Заполните поле",
+          minlength: "Имя должно быть не короче 2 букв",
+          maxlength: "Имя должно быть не длинее 15 букв"
+        },
+        userPhone: {
+          required: "Заполните поле",
+          minlength: "Введите полный номер телефона"
+        },
+        userEmail: {
+          required: "Заполните поле",
+          email: "Введите корректный Email в формате name@domain.com"
+        },
+        userQuestion: "Задайте Ваш вопрос",
+        policyCheckbox: "Установите галочку на соглашении"
+      }
 
-  //валидность телефонного номера в соответствии с маской
-  jQuery.validator.addMethod("checkMask", function(value, element) {
-    return /\+\d{1}\(\d{3}\)\d{2}-\d{2}-\d{3}/g.test(value);
-  });
-  //форма модального окна
-  $(".modal__form").validate({
-    errorElement: "div",
-    errorClass: "invalid",
-    rules: {
-      userName: {
-        required: true,
-        minlength: 2,
-        maxlength: 15
-      },
-      userPhone: {
-        required: true,
-        checkMask: true,
-      },
-      userEmail: {
-        required: true,
-        email: true
-      }
-    },
-    //сообщения
-    messages: {
-      userName: {
-        required: "Имя обязательно",
-        minlength: "Имя не короче 2 букв",
-        maxlength: "Имя должно быть не длинее 15 букв"
-      },
-      userPhone: {
-        required: "Телефон обязателен",
-        checkMask: "Введите полный номер телефона"
-      },
-      userEmail: {
-        required: "Обязательно укажите Email",
-        email: "Введите корректный Email в формате name@domain.com"
-      }
-    },
-
-  });
-  //Форма секции Control
-  $(".control__form").validate({
-    errorElement: "div",
-    errorClass: "invalid",
-    rules: {
-      userName: {
-        required: true,
-        minlength: 2,
-        maxlength: 15
-      },
-      userPhone: {
-        required: true,
-        checkMask: true,
-      },
-      userEmail: {
-        required: true,
-        email: true
-      }
-    },
-    //сообщения
-    messages: {
-      userName: {
-        required: "Имя обязательно",
-        minlength: "Имя не короче 2 букв",
-        maxlength: "Имя должно быть не длинее 15 букв"
-      },
-      userPhone: {
-        required: "Телефон обязателен",
-        checkMask: "Введите полный номер телефона"
-      },
-      userEmail: {
-        required: "Обязательно укажите Email",
-        email: "Введите корректный Email в формате name@domain.com"
-      }
-    },
-
-  });
-
-//  форма секции footer
-  $(".footer__form").validate({
-    errorElement: "div",
-    errorClass: "invalid",
-    rules: {
-      userName: {
-        required: true,
-        minlength: 2,
-        maxlength: 15
-      },
-      userPhone: {
-        required: true,
-        checkMask: true,
-      },
-      userEmail: {
-        required: true,
-        email: true
-      }
-    },
-    //сообщения
-    messages: {
-      userName: {
-        required: "Имя обязательно",
-        minlength: "Имя не короче 2 букв",
-        maxlength: "Имя должно быть не длинее 15 букв"
-      },
-      userPhone: {
-        required: "Телефон обязателен",
-        checkMask: "Введите полный номер телефона"
-      },
-      userEmail: {
-        required: "Обязательно укажите Email",
-        email: "Введите корректный Email в формате name@domain.com"
-      }
-    },
+    });
 
   });
 
 //  маска для телефона
 
-  $('[type=tel]').mask('+7 (000) 000-00-00', {placeholder: "+7 (___) ___-__-__"});
+  $('[type=tel]').mask('+7 (000) 000-00-00',);
 
-
-  
 });
   
 
