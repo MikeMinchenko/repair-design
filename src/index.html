@@ -8,6 +8,7 @@
   <link rel="stylesheet" href="https://unpkg.com/swiper/css/swiper.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.0.0/animate.min.css">
   <link rel="stylesheet" href="css/style.css">
+  
   <link rel="icon" href="img/favicon.ico" type="image/x-icon">
 </head>
 <body>
@@ -62,9 +63,9 @@
               <p class="section-title__text">На сайте представлена ​​лишь небольшая часть работ, выполняемых нашей компанией. За 14 лет работы на строительном рынке мы осчастливили более 1000 семей</p>
             </div>
 
-            <div class="swiper-container projects__swiper-container">
+            <div class="swiper-no-swiping swiper-container projects__swiper-container">
               <!-- Additional required wrapper -->
-              <div class="swiper-wrapper swiper-no-swiping">
+              <div class="swiper-wrapper ">
                   <!-- Slides -->
                 <div class="swiper-slide projects__swiper-slide">
 
@@ -150,7 +151,7 @@
           <!-- /.col-50 -->
           <div class="col-55">
 
-            <div class="swiper-container projects__swiper-container wow animate__fadeInRight ">
+            <div class="swiper-container swiper-no-swiping projects__swiper-container wow animate__fadeInRight ">
               <!-- Additional required wrapper -->
               <div class="swiper-wrapper swiper-no-swiping">
                   <!-- Slides -->
@@ -200,7 +201,7 @@
           На каждом объекте установлена ​​камера, которая транслирует ход работы на часах. В любой момент вы можете зайти на наш сайт и следить за ходом работы в вашей квартире. Посмотрите прямую трансляцию с одного из наших объектов! Оставьте заявку ниже чтобы получить ссылку на трансляцию.
         </p>
 
-        <form action="#" class="form control__form">
+        <form action="send.php" method="POST" class="form control__form">
           <div class="input-group control__input-group">
             <label for="controlUser-name" class="label form__label control__label">Имя</label>
             <input type="text" class="input form__input control__input" id="controlUser-name" name="userName" placeholder="Как вас зовут:">
@@ -377,13 +378,13 @@
     <section class="section steps section--dark">
       <div class="container">
         <div class="row steps__row">
-          <div class="col-30">
+          <div class="col-37-8">
             <span class="steps__subtitle">как мы работаем</span>
             <h2 class="section-title__heading section-title__heading--primary steps__heading">6 шагов<span class="section-title__word steps__word">до цели</span></h2>
             <!-- первый слайдер с цифрами и буллетами -->
 
             
-            <div class="swiper-container steps__swiperText-container">
+            <div class="swiper-container swiper-no-swiping steps__swiperText-container">
 
               <div class="steps__swiperImg-pagination"></div>
               
@@ -391,38 +392,38 @@
                   <!-- Slides -->
                 <div class="swiper-slide steps-slide">
                   <h3 class="steps-slide__heading">Выезд на замеры <br> помещения</h3>
-                  <p class="steps-slide__text">После вашего звонка мы идем к вам, чтобы проконсультироваться и измерить помещения вашей квартиры. Во время нашей встречи вы можете задать абсолютно любые вопросы, касаемо ремонта.</p>
-                  <p class="steps-slide__text"> Оценщик приходит, чтобы измерить комнату. Он проконсультирует вас по вопросам техники ремонта, дизайна квартиры, сроков ремонта квартиры в целом и отдельных ее этапов.
+                  <p class="steps-slide__text steps-slide__text--first">После вашего звонка мы идем к вам, чтобы проконсультироваться и измерить помещения вашей квартиры. Во время нашей встречи вы можете задать абсолютно любые вопросы, касаемо ремонта.</p>
+                  <p class="steps-slide__text steps-slide__text--second"> Оценщик приходит, чтобы измерить комнату. Он проконсультирует вас по вопросам техники ремонта, дизайна квартиры, сроков ремонта квартиры в целом и отдельных ее этапов.
                   </p>
                 </div>
                 <div class="swiper-slide steps-slide">
                   <h3 class="steps-slide__heading">Составление <br> сметы</h3>
-                  <p class="steps-slide__text">После вашего звонка мы идем к вам, чтобы проконсультироваться и измерить помещения вашей квартиры. Во время нашей встречи вы можете задать абсолютно любые вопросы, касаемо ремонта.</p>
-                  <p class="steps-slide__text"> Оценщик приходит, чтобы измерить комнату. Он проконсультирует вас по вопросам техники ремонта, дизайна квартиры, сроков ремонта квартиры в целом и отдельных ее этапов.
+                  <p class="steps-slide__text steps-slide__text--first">После вашего звонка мы идем к вам, чтобы проконсультироваться и измерить помещения вашей квартиры. Во время нашей встречи вы можете задать абсолютно любые вопросы, касаемо ремонта.</p>
+                  <p class="steps-slide__text steps-slide__text--second"> Оценщик приходит, чтобы измерить комнату. Он проконсультирует вас по вопросам техники ремонта, дизайна квартиры, сроков ремонта квартиры в целом и отдельных ее этапов.
                   </p>
                 </div>
                 <div class="swiper-slide steps-slide">
                   <h3 class="steps-slide__heading">Разработка дизайн <br> проекта</h3>
-                  <p class="steps-slide__text">После вашего звонка мы идем к вам, чтобы проконсультироваться и измерить помещения вашей квартиры. Во время нашей встречи вы можете задать абсолютно любые вопросы, касаемо ремонта.</p>
-                  <p class="steps-slide__text"> Оценщик приходит, чтобы измерить комнату. Он проконсультирует вас по вопросам техники ремонта, дизайна квартиры, сроков ремонта квартиры в целом и отдельных ее этапов.
+                  <p class="steps-slide__text steps-slide__text--first">После вашего звонка мы идем к вам, чтобы проконсультироваться и измерить помещения вашей квартиры. Во время нашей встречи вы можете задать абсолютно любые вопросы, касаемо ремонта.</p>
+                  <p class="steps-slide__text steps-slide__text--second"> Оценщик приходит, чтобы измерить комнату. Он проконсультирует вас по вопросам техники ремонта, дизайна квартиры, сроков ремонта квартиры в целом и отдельных ее этапов.
                   </p>
                 </div>
                 <div class="swiper-slide steps-slide">
                   <h3 class="steps-slide__heading">Закупка расходных <br> материалов</h3>
-                  <p class="steps-slide__text">После вашего звонка мы идем к вам, чтобы проконсультироваться и измерить помещения вашей квартиры. Во время нашей встречи вы можете задать абсолютно любые вопросы, касаемо ремонта.</p>
-                  <p class="steps-slide__text"> Оценщик приходит, чтобы измерить комнату. Он проконсультирует вас по вопросам техники ремонта, дизайна квартиры, сроков ремонта квартиры в целом и отдельных ее этапов.
+                  <p class="steps-slide__text steps-slide__text--first">После вашего звонка мы идем к вам, чтобы проконсультироваться и измерить помещения вашей квартиры. Во время нашей встречи вы можете задать абсолютно любые вопросы, касаемо ремонта.</p>
+                  <p class="steps-slide__text steps-slide__text--second"> Оценщик приходит, чтобы измерить комнату. Он проконсультирует вас по вопросам техники ремонта, дизайна квартиры, сроков ремонта квартиры в целом и отдельных ее этапов.
                   </p>
                 </div>
                 <div class="swiper-slide steps-slide">
                   <h3 class="steps-slide__heading">Ремонтно-отделочные <br> работы</h3>
-                  <p class="steps-slide__text">После вашего звонка мы идем к вам, чтобы проконсультироваться и измерить помещения вашей квартиры. Во время нашей встречи вы можете задать абсолютно любые вопросы, касаемо ремонта.</p>
-                  <p class="steps-slide__text"> Оценщик приходит, чтобы измерить комнату. Он проконсультирует вас по вопросам техники ремонта, дизайна квартиры, сроков ремонта квартиры в целом и отдельных ее этапов.
+                  <p class="steps-slide__text steps-slide__text--first">После вашего звонка мы идем к вам, чтобы проконсультироваться и измерить помещения вашей квартиры. Во время нашей встречи вы можете задать абсолютно любые вопросы, касаемо ремонта.</p>
+                  <p class="steps-slide__text steps-slide__text--second"> Оценщик приходит, чтобы измерить комнату. Он проконсультирует вас по вопросам техники ремонта, дизайна квартиры, сроков ремонта квартиры в целом и отдельных ее этапов.
                   </p>
                 </div>
                 <div class="swiper-slide steps-slide">
                   <h3 class="steps-slide__heading"> Приемка-сдача <br> работ</h3>
-                  <p class="steps-slide__text">После вашего звонка мы идем к вам, чтобы проконсультироваться и измерить помещения вашей квартиры. Во время нашей встречи вы можете задать абсолютно любые вопросы, касаемо ремонта.</p>
-                  <p class="steps-slide__text"> Оценщик приходит, чтобы измерить комнату. Он проконсультирует вас по вопросам техники ремонта, дизайна квартиры, сроков ремонта квартиры в целом и отдельных ее этапов.
+                  <p class="steps-slide__text steps-slide__text--first">После вашего звонка мы идем к вам, чтобы проконсультироваться и измерить помещения вашей квартиры. Во время нашей встречи вы можете задать абсолютно любые вопросы, касаемо ремонта.</p>
+                  <p class="steps-slide__text steps-slide__text--second"> Оценщик приходит, чтобы измерить комнату. Он проконсультирует вас по вопросам техники ремонта, дизайна квартиры, сроков ремонта квартиры в целом и отдельных ее этапов.
                   </p>
                 </div>
 
@@ -438,71 +439,71 @@
 
           </div>
           <!-- /.col-30 -->
-          <div class="col-70">
+          <div class="col-61-7">
 
             <div class="steps-wrap">
-              <div class="steps-wrap__text steps-button-0" >
+              <div class="steps-wrap__text steps-button-0 steps-button" >
                 <h3 class="steps-wrap__heading">01</h3> <br>
                 <span class="steps-wrap__value">Выезд на замер <br> помещения</span>
               </div>
-              <div class="steps-wrap__text shadow steps-button-1" >
+              <div class="steps-wrap__text shadow steps-button-1 steps-button" >
                 <h3 class="steps-wrap__heading">02</h3> <br>
                 <span class="steps-wrap__value">Составление <br> сметы</span>
               </div>
-              <div class="steps-wrap__text shadow steps-button-2">
+              <div class="steps-wrap__text shadow steps-button-2 steps-button">
                 <h3 class="steps-wrap__heading">03</h3> <br>
                 <span class="steps-wrap__value">Разработка <br> дизайн проекта</span>
               </div>
             </div>
 
             <div class="steps-wrap">
-              <div class="steps-wrap__text shadow steps-button-3">
+              <div class="steps-wrap__text shadow steps-button-3 steps-button">
                 <h3 class="steps-wrap__heading">04</h3> <br>
                 <span class="steps-wrap__value">Закупка расходных <br> материалов</span>
               </div>
-              <div class="steps-wrap__text shadow steps-button-4">
+              <div class="steps-wrap__text shadow steps-button-4 steps-button">
                 <h3 class="steps-wrap__heading">05</h3> <br>
                 <span class="steps-wrap__value">Ремонтно-отделочные <br> работы</span>
               </div>
-              <div class="steps-wrap__text shadow steps-button-5">
+              <div class="steps-wrap__text shadow steps-button-5 steps-button">
                 <h3 class="steps-wrap__heading">06</h3> <br>
                 <span class="steps-wrap__value">Приемка-сдача <br> работ</span>
               </div>
             </div>
 
             <!--   слайдер с картинкой         -->
-            <div class="swiper-container steps__swiperImg-container">
+            <div class="swiper-container swiper-no-swiping steps__swiperImg-container">
 
               <div class="swiper-wrapper">
                 <div class="swiper-slide">
-                  <div class="projects-img-wrap">
-                      <img class="swiper-slide__img" src="img/steps/image-1.jpg" alt="фото обьекта">
-                    </div>
+                  
+                  <img class="swiper-slide__img steps__swiperImg" src="img/steps/image-1.jpg" alt="фото обьекта">
+                    
                 </div>
                 <div class="swiper-slide">
-                  <div class="projects-img-wrap">
-                      <img class="swiper-slide__img" src="img/steps/image-2.jpg" alt="фото обьекта">
-                    </div>
+                  
+                  <img class="swiper-slide__img steps__swiperImg" src="img/steps/image-2.jpg" alt="фото обьекта">
+                    
                 </div>
                 <div class="swiper-slide">
-                  <div class="projects-img-wrap">
-                      <img class="swiper-slide__img" src="img/steps/image-3.jpg" alt="фото обьекта">
-                    </div>
+                  
+                  <img class="swiper-slide__img steps__swiperImg" src="img/steps/image-3.jpg" alt="фото обьекта">
+                    
                 </div>
                 <div class="swiper-slide">
-                  <div class="projects-img-wrap">
-                      <img class="swiper-slide__img" src="img/steps/image-4.jpg" alt="фото обьекта">
-                    </div>
+                  
+                  <img class="swiper-slide__img steps__swiperImg" src="img/steps/image-4.jpg" alt="фото обьекта">
+                    
                 </div>
                 <div class="swiper-slide">
-                  <div class="projects-img-wrap">
-                      <img class="swiper-slide__img" src="img/steps/image-5.jpg" alt="фото обьекта">
-                    </div>
+                  
+                  <img class="swiper-slide__img steps__swiperImg" src="img/steps/image-5.jpg" alt="фото обьекта">
+                    
                 </div>
                 <div class="swiper-slide">
-                  <div class="projects-img-wrap">
-                      <img class="swiper-slide__img" src="img/steps/image-6.jpg" alt="фото обьекта">
-                    </div>
+                  
+                  <img class="swiper-slide__img steps__swiperImg" src="img/steps/image-6.jpg" alt="фото обьекта">
+                    
                 </div>
                 
               </div>
@@ -587,6 +588,102 @@
       </div>
     </section>
 
+<!--    наши клиенты -->
+
+    <section class="section client client__section">
+
+      <div class="container">
+
+        <div class="section-title client__section-title wow animate__fadeInUp">
+          <h2 class="section-title__heading client__section-title">Наши клиенты</h2>
+          <div class="section-title__img">
+            <img src="img/clients/client-icon.svg" alt="clients">
+          </div>
+        </div>
+        <p class="section-subtitle client__section-subtitle wow animate__fadeIn">
+          80% наших клиентов рекомендуют нас своим знакомым и друзьям
+        </p>
+
+        <div class="client__wrap">
+
+          <div class="client__card">
+            <div class="client__fullName">
+              <div class="client__photo">
+                <img src="img/clients/client-1.jpg" alt="фото клиента" class="client__img">
+              </div>
+              <h3 class="client__name">Савельева Екатерина Львовна</h3>
+            </div>
+            <p class="client__feedback">Я хочу поблагодарить ребят за их работу. Они вложили душу в ремонт. Я очень благодарна, что сделали как для самих себя. Большое спасибо, я выражаю проектному менеджеру за его профессионализм и подход. Процесс ремонта был завершен быстрее, чем ожидалось. Команда мобильная и профессиональная. Работы выполнены качественно без нареканий. Цены демократические. Я рекомендую этих мастеров.</p>
+            <div class="client__tags">
+
+              <div class="client-tag client-tag--first">
+                <img src="img/clients/tag-1.svg" alt="площадь" class="client-tag__img">
+                <span class="client-tag__description client-tag__description--uppercase">40 М<sup>2</sup></span>
+              </div>
+
+              <div class="client-tag client-tag--second">
+                <img src="img/clients/tag-2.svg" alt="время" class="client-tag__img">
+                <span class="client-tag__description">45 дней</span>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="client__card">
+            <div class="client__fullName">
+              <div class="client__photo">
+                <img src="img/clients/client-2.jpg" alt="фото клиента" class="client__img">
+              </div>
+              <h3 class="client__name">Большов Михаил Анатольевич</h3>
+            </div>
+            <p class="client__feedback">Я хочу поблагодарить ребят за их работу. Они вложили душу в ремонт. Я очень благодарен, что сделали как для самих себя. Большое спасибо, я выражаю проектному менеджеру за его профессионализм и подход. Процесс ремонта был завершен быстрее, чем ожидалось. Команда мобильная и профессиональная. Работы выполнены качественно без нареканий. Качество высокое. <br> Я рекомендую этих мастеров.</p>
+            <div class="client__tags">
+
+              <div class="client-tag client-tag--first">
+                <img src="img/clients/tag-1.svg" alt="площадь" class="client-tag__img">
+                <span class="client-tag__description client-tag__description--uppercase">90 м<sup>2</sup></span>
+              </div>
+
+              <div class="client-tag client-tag--second">
+                <img src="img/clients/tag-2.svg" alt="время" class="client-tag__img">
+                <span class="client-tag__description ">128 дней</span>
+              </div>
+
+            </div>
+          </div>
+
+          <div class="client__card">
+            <div class="client__fullName">
+              <div class="client__photo">
+                <img src="img/clients/client-3.jpg" alt="фото клиента" class="client__img">
+              </div>
+              <h3 class="client__name">Хасанов Даниил Муратович</h3>
+            </div>
+            <p class="client__feedback">Я хочу поблагодарить ребят за их работу. Они вложили душу в ремонт. Я очень благодарен, что сделали как для самих себя. Большое спасибо, я выражаю проектному менеджеру за его профессионализм и подход. Процесс ремонта был завершен быстрее, чем ожидалось. Команда мобильная и профессиональная. Работы выполнены качественно без нареканий. Качество высокое. Цены демократические. </p>
+            <div class="client__tags">
+
+              <div class="client-tag client-tag--first">
+                <img src="img/clients/tag-1.svg" alt="площадь" class="client-tag__img">
+                <span class="client-tag__description client-tag__description--uppercase">56 м<sup>2</sup></span>
+              </div>
+
+              <div class="client-tag client-tag--second">
+                <img src="img/clients/tag-2.svg" alt="время" class="client-tag__img">
+                <span class="client-tag__description">86 дней</span>
+              </div>
+
+            </div>
+          </div>
+
+
+        </div>
+        <!-- /.client__wrap -->
+
+      </div>
+      <!-- /.container -->
+
+    </section>
+
   </main>
 
   <footer class="footer section section-dark">
@@ -594,7 +691,7 @@
 
       <div class="footer-wrap">
         <h3 class="footer__title">Остались вопросы?</h3>
-        <form action="#" class="form footer__form">
+        <form action="send.php" method="POST" class="form footer__form">
           <div class="input-group footer__input-group">
             <label for="footerUser-name" class="label form__label label--light">Имя</label>
             <input type="text" class="input form__input footer__input input--light" id="footerUser-name" name="userName"
@@ -633,38 +730,42 @@
           </div>
         </div>
 
-        <div class="map footer__map" id="map">
-          <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A22e55402d10e6f51663bd4b5066fdc5c154b4591d46eca726881c0763fe644b5&amp;width=100%25&amp;height=100%25&amp;lang=ru_RU&amp;scroll=true"></script>
-        </div>
+        <div class="map-container footer__map-container">
+          <div class="loader loader-default"></div>
+          <div class="map" id="map"></div>
+        </div>        
       </div>
     </div>
+
+    <!--  footer menu-->
+    <div class="footer-menu">
+
+      <div class="container">
+
+        <div class="menu">
+          <a class="logo menu__logo animate__animated animate__fadeInDown" href="./index.html">Repair Design Project</a>
+          <nav class="nav menu__nav">
+            <a href="#" class="nav__item">Главная</a>
+            <a href="#" class="nav__item">Проекты</a>
+            <a href="#" class="nav__item">Замер</a>
+            <a href="#" class="nav__item">Команда</a>
+            <a href="#" class="nav__item">Отзывы</a>
+            <a href="#" class="nav__item">Контакты</a>
+          </nav>
+          <div class="contacts menu__contacts">
+            <a href="tel:+79997683299" class="phone contacts__phone">+7 (999) 768-32-99</a>
+            <button class="button contacts__button button--primary" data-togle="modal">Заказать звонок</button>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
   </footer>
 
-  <!--  footer menu-->
-  <div class="footer-menu">
 
-    <div class="container">
-
-      <div class="menu">
-        <a class="logo menu__logo animate__animated animate__fadeInDown" href="./index.html">Repair Design Project</a>
-        <nav class="nav menu__nav">
-          <a href="#" class="nav__item">Главная</a>
-          <a href="#" class="nav__item">Проекты</a>
-          <a href="#" class="nav__item">Замер</a>
-          <a href="#" class="nav__item">Команда</a>
-          <a href="#" class="nav__item">Отзывы</a>
-          <a href="#" class="nav__item">Контакты</a>
-        </nav>
-        <div class="contacts menu__contacts">
-          <a href="tel:+79997683299" class="phone contacts__phone">+7 (999) 768-32-99</a>
-          <button class="button contacts__button button--primary" data-togle="modal">Заказать звонок</button>
-        </div>
-
-      </div>
-
-    </div>
-
-  </div>
   <!-- модальное окно  -->
   <div class="modal">
     <div class="modal__dialog"> 
@@ -673,7 +774,7 @@
 
       <h3 class="modal__title">Оставьте заявку и наш менеджер свяжется с вами </h3>
 
-      <form action="#" class="form modal__form">
+      <form action="send.php" method="POST" class="form modal__form">
 
         <div class="input-group modal__input-group">
           <label for="modalUser-name" class="label form__label label--light">Имя</label>
@@ -709,6 +810,7 @@
   <script src="js/wow.min.js"></script>
   <script src="js/jquery.validate.min.js"></script>
   <script src="js/jquery.mask.min.js"></script>
+
   <script src="js/main.js"></script>
 </body>
 </html>

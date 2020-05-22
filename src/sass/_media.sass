@@ -13,6 +13,8 @@
   .nav
     &__item
       margin-right: 1.5rem
+  .goTop
+    bottom: 65px
 @media screen and ( min-width: 992px )
   .menu
     &__logo
@@ -124,6 +126,26 @@
     &__row
       flex-direction: row
       align-items: start
+  .steps
+    &__row
+      flex-direction: column      
+    &__subtitle
+      margin-top: 0
+    &-slide
+      &__text
+        &--first
+          max-width: 27.16rem
+        &--second
+          max-width: 27.16rem
+    &__swiperText
+      &-container
+        margin-bottom: 4rem
+  .col
+    &-37-8
+      width: 80%
+    &-61-7
+      width: 80%
+      align-self: center
 @media screen and ( max-width: 768px )
   .nav
     display: none
@@ -176,7 +198,8 @@
       order: 1
       display: block
       margin: auto
-
+  .steps
+    display: none
 @media screen and ( max-width: 576px)
   .contacts
     &__button
@@ -257,7 +280,7 @@
       flex-direction: column
       align-items: flex-start
       margin-bottom: 5.603rem
-    &__map
+    &__map-container
       order: -1
       margin-bottom: 3.4rem
       height: 254px
@@ -272,8 +295,8 @@
         height: 39px
     &__mail
       margin-right: 18px
-
-
+  .goTop
+    display: none
 @media screen and ( max-width: 375px)
   .hero
     &__content

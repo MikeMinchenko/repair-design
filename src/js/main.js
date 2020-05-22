@@ -30,18 +30,19 @@ $(document).ready(function () {
         $('.goTop').fadeOut();
     }
 });
-  // скрытие to top на маленьких экранах
-  $(window).resize(function(){
-    if ($(this).width() < 576) {
-        $('.goTop').fadeOut();
-    } else {
-        $('.goTop').fadeIn();
-    }
-  });
+
+  // // скрытие to top на маленьких экранах
+  // $(window).width(function(){
+  //   if ($(this).width() > 576) {
+  //       $('.goTop').fadeIn();
+  //   } else {
+  //       $('.goTop').fadeOut();
+  //   }
+  // });
 
   // to top по клику
   $('.goTop').click(function(){
-      $('html, body').animate({scrollTop : 0},800);
+      $('html, body').animate({scrollTop : 0},1400);
       return false;
   });
   // инициализация слайдера
@@ -192,7 +193,10 @@ $(document).ready(function () {
           required: true,
           email: true
         },
-        userQuestion: "required",
+        userQuestion: {
+        required: true,
+        minlength: 10
+        },
         policyCheckbox: "required"
       },
       //сообщения
@@ -210,7 +214,10 @@ $(document).ready(function () {
           required: "Заполните поле",
           email: "Введите корректный Email в формате name@domain.com"
         },
-        userQuestion: "Задайте Ваш вопрос",
+        userQuestion: {
+        required: "Задайте Ваш вопрос",
+        minlength: "Вопрос должен быть не короче 10 символов"
+        },
         policyCheckbox: "Установите галочку на соглашении"
       }
 
@@ -222,8 +229,217 @@ $(document).ready(function () {
 
   $('[type=tel]').mask('+7 (000) 000-00-00',);
 
-});
+//  инициализация карты
+
+//Ymap start
+  var spinner = $('.map-container').children('.loader');
+  var check_if_load = 0;
+  var myMapTemp, myPlacemarkTemp;
+
+
+  function init () {
+    var myMapTemp = new ymaps.Map("map", {
+      center: [47.208901, 39.631539],
+      zoom: 16,
+      }, {
+      searchControlProvider: 'yandex#search'
+    });
+
+    var myPlacemarkTemp = new ymaps.Placemark([47.208901, 39.631539], {
+        hintContent: 'Наш офис',
+        balloonContent: "Офис на 3 этаже",
+      }, {
+        // Опции.
+        // Необходимо указать данный тип макета.
+        iconLayout: 'default#imageWithContent',
+        // Своё изображение иконки метки.
+        iconImageHref: 'img/location.png',
+        // Размеры метки.
+        iconImageSize: [35, 35],
+        // Смещение левого верхнего угла иконки относительно
+        // её "ножки" (точки привязки).
+        iconImageOffset: [-5, -38],
+    });
+
+    myMapTemp.geoObjects.add(myPlacemarkTemp);
+    myMapTemp.behaviors.disable('scrollZoom');
+
+    //Получаем первый экземпляр коллекции слоев, потом первый слой коллекции
+    var layer = myMapTemp.layers.get(0).get(0);
+
+    //Решение по callback-у для определния полной загрузки карты: http://ru.stackoverflow.com/questions/463638/callback-загрузки-карты-yandex-map
+    waitForTilesLoad(layer).then(function() {
+      //Скрываем
+      spinner.removeClass('is-active');
+    });
+  }
+
+  function waitForTilesLoad(layer) {
+    return new ymaps.vow.Promise(function (resolve, reject) {
+      var tc = getTileContainer(layer), readyAll = true;
+      tc.tiles.each(function (tile, number) {
+        if (!tile.isReady()) {
+          readyAll = false;
+        }
+      });
+      if (readyAll) {
+        resolve();
+      } else {
+        tc.events.once("ready", function() {
+          resolve();
+        });
+      }
+    });
+  }
+
+  function getTileContainer(layer) {
+    for (var k in layer) {
+      if (layer.hasOwnProperty(k)) {
+        if (
+          layer[k] instanceof ymaps.layer.tileContainer.CanvasContainer
+          || layer[k] instanceof ymaps.layer.tileContainer.DomContainer
+        ) {
+          return layer[k];
+        }
+      }
+    }
+    return null;
+  }
+
+  function loadScript(url, callback){
+
+    var script = document.createElement("script");
+
+    if (script.readyState){  //IE
+      script.onreadystatechange = function(){
+        if (script.readyState === "loaded" ||
+                script.readyState === "complete"){
+          script.onreadystatechange = null;
+          callback();
+        }
+      };
+    } else {  //Другие браузеры
+      script.onload = function(){
+        callback();
+      };
+    }
+
+    script.src = url;
+    document.getElementsByTagName("head")[0].appendChild(script);
+  }
+
   
+  var ymap = function() {
+    $('.map-container').mouseenter(function(){
+        if (!check_if_load) { // проверяем первый ли раз загружается Яндекс.Карта, если да, то загружаем
+   
+        // Чтобы не было повторной загрузки карты, мы изменяем значение переменной
+          check_if_load = true;
+   
+      // Показываем индикатор загрузки до тех пор, пока карта не загрузится
+          spinner.addClass('is-active');
+   
+      // Загружаем API Яндекс.Карт
+          loadScript("https://api-maps.yandex.ru/2.1/?apikey=91aa17f6-4a8b-4b5b-bb3d-57cf3bd3c669&lang=ru_RU", function(){
+             // Как только API Яндекс.Карт загрузились, сразу формируем карту и помещаем в блок с идентификатором &#34;map-yandex&#34;
+             ymaps.load(init);
+          });                
+        }
+      }
+    );  
+  }
+   
+  $(function() {
+   
+    //Запускаем основную функцию
+    ymap();
+   
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//   ymaps.ready(function () {
+//     var myMap = new ymaps.Map('map', {
+//           center: [47.208901, 39.631539],
+//           zoom: 16
+//         }, {
+//           searchControlProvider: 'yandex#search'
+//         }),
+
+//         // Создаём макет содержимого.
+//         MyIconContentLayout = ymaps.templateLayoutFactory.createClass(
+//             '<div style="color: #FFFFFF; font-weight: bold;">$[properties.iconContent]</div>'
+//         ),
+
+//         myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
+//           hintContent: 'Наш офис',
+//           balloonContent: '3 этаж'
+//         }, {
+//           // Опции.
+//           // Необходимо указать данный тип макета.
+//           iconLayout: 'default#image',
+//           // Своё изображение иконки метки.
+//           iconImageHref: 'img/location.png',
+//           // Размеры метки.
+//           iconImageSize: [35, 35],
+//           // Смещение левого верхнего угла иконки относительно
+//           // её "ножки" (точки привязки).
+//           iconImageOffset: [-5, -38]
+//         });
+
+//         myMap.geoObjects
+//         .add(myPlacemark),
+//         myMap.behaviors.disable('scrollZoom')
+//     })
+
+});
+
 
     
     

@@ -1,11 +1,11 @@
 .footer
+  padding-bottom: 0
   background: $dark url("../img/footer/footer-bg.jpg") no-repeat center/cover
   &-wrap
     background: $black url("../img/footer/footer-modal-bg.svg") no-repeat center/cover
     max-width: 63.07rem
-    margin: auto
+    margin: -282px auto 3.514rem
     padding: 2.5rem
-    margin-bottom: 3.514rem
   &__form
     max-width: 37.142rem
     margin: auto
@@ -63,16 +63,37 @@
     margin-bottom: 1.7rem
   &__links
     text-align: center
+    &-img
+      border: none
   &__mail
     text-decoration: none
     margin-right: 15px
+    outline-color: $primary
   &__inst
     text-decoration: none
-  &__map
+    outline-color: $primary
+  &__map-container
+    background: url('../img/footer/map-img.jpg') #fff no-repeat
+    background-size: cover
+    background-position: center center    
+    position: relative
+    overflow: hidden
+    cursor: pointer
     height: 465px
+    margin-bottom: 4.785rem    
 .address
   &__header
     margin-bottom: 2.8rem
+.map
+  cursor: pointer
+  height: 100%
+  width: 100%
+  background-color: transparent
+  position: relative
+  z-index: 7
+
+  
+
 
 
 
