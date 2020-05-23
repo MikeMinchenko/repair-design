@@ -1,4 +1,5 @@
 $(document).ready(function () {
+  // МОДАЛЬНОЕ ОКНО
   var modal = $('.modal'),
       modalBtn = $('[data-togle=modal]'),
       closeBtn = $('.modal__close');
@@ -20,6 +21,25 @@ $(document).ready(function () {
   $(document).keydown(function (e) {
     if (e.key === 'Escape') {
       modal.removeClass('modal--visible');
+    }
+  });
+  // ОКНО БЛАГОДАРНОСТИ
+  var thanks = $('.thanks__container'),
+      thanksClose = $('.thanksBlock__button');  
+  // закрытие модального по нажатию на кнопку close
+  thanksClose.on('click', function () {
+    thanks.removeClass('thanks--visible');
+  });
+  // закрытие окна благодарности по клику вне окна
+  $(document).click(function (e) {
+    if (e.target.classList.contains('thanks__container')) {
+      thanks.removeClass('thanks--visible');
+    }
+  });
+  // закрытие окна благодарности по esc
+  $(document).keydown(function (e) {
+    if (e.key === 'Escape') {
+      thanks.removeClass('thanks--visible');
     }
   });
   // скрытие to top на главном экране
@@ -219,10 +239,22 @@ $(document).ready(function () {
         minlength: "Вопрос должен быть не короче 10 символов"
         },
         policyCheckbox: "Установите галочку на соглашении"
+      },
+        
+      submitHandler: function(form) {
+        $.ajax({
+          type: "POST",
+          url: "send.php",
+          data: $(form).serialize(),        
+          success: function (response) {            
+            $(form)[0].reset();
+            modal.removeClass('modal--visible');
+            thanks.addClass('thanks--visible');
+
+          }
+        });
       }
-
     });
-
   });
 
 //  маска для телефона
@@ -355,6 +387,7 @@ $(document).ready(function () {
     ymap();
    
   });
+});
 
 
 
@@ -438,7 +471,7 @@ $(document).ready(function () {
 //         myMap.behaviors.disable('scrollZoom')
 //     })
 
-});
+
 
 
     

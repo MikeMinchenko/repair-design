@@ -1,13 +1,24 @@
-.thanks
-  padding: 0
-  width: 100%
-  height: 100vh
-  background: $dark url('../img/thanks-img.jpg') no-repeat center/cover
+.thanks  
   &__container    
+    opacity: 0
+    visibility: hidden
+    position: fixed
+    z-index: 199
+    left: 0
+    top: 0
+    bottom: 0
+    right: 0
+    width: 100%
     height: 100%
+    background-color: rgba($dark, 0.6)
     display: flex
-    justify-content: center
     align-items: center
+    justify-content: center
+    transition: visibility 0.4s, opacity 0.4s
+  &--visible
+    opacity: 1
+    visibility: visible
+    
 .thanksBlock
   width: 100%
   max-width: 45.714rem

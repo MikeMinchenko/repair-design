@@ -15,7 +15,8 @@ $mail = new PHPMailer\PHPMailer\PHPMailer();
 
 try {
     //Server settings
-    $mail->SMTPDebug = 0;                      // Enable verbose debug output
+    $mail->SMTPDebug = 0;
+    $mail->CharSet = 'UTF-8';                      // Enable verbose debug output
     $mail->isSMTP();                                            // Send using SMTP
     $mail->Host       = 'smtp.gmail.com';                    // Set the SMTP server to send through
     $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
@@ -34,10 +35,14 @@ try {
     $mail->Body    = "Имя пользователя: ${userName}. Телефон: ${userPhone}. Почта: ${userEmail}. Вопрос : ${userQuestion}";
 
 
-    $mail->send();
-    header('Location: thanks.html');
-} catch (Exception $e) {
-    echo "Письмо не отправлено, есть ошибка. Код ошибки: {$mail->ErrorInfo}";
+    if ($mail->send()) {
+        echo "ок";
+    } else {
+        echo "Письмо не отправлено, есть ошибка. Код ошибки: {$mail->ErrorInfo}";
+    }
+    
+    } catch (Exception $e) {
+        echo "Письмо не отправлено, есть ошибка. Код ошибки: {$mail->ErrorInfo}";
 }
 
 
