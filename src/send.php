@@ -31,7 +31,7 @@ try {
 
     // Content
     $mail->isHTML(true);                                  // Set email format to HTML
-    $mail->Subject = 'Новая заявка с сайта';
+    $mail->Subject = 'Новая заявка с сайта RepairDesign';
     $mail->Body    = "Имя пользователя: ${userName}. Телефон: ${userPhone}. Почта: ${userEmail}. Вопрос : ${userQuestion}";
 
 

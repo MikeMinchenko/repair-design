@@ -24,15 +24,15 @@ $(document).ready(function () {
     }
   });
   // ОКНО БЛАГОДАРНОСТИ
-  var thanks = $('.thanks__container'),
-      thanksClose = $('.thanksBlock__button');  
+  var thanks = $('.thanks'),
+      thanksClose = $('.thanks__button');  
   // закрытие модального по нажатию на кнопку close
   thanksClose.on('click', function () {
     thanks.removeClass('thanks--visible');
   });
   // закрытие окна благодарности по клику вне окна
   $(document).click(function (e) {
-    if (e.target.classList.contains('thanks__container')) {
+    if (e.target.classList.contains('thanks')) {
       thanks.removeClass('thanks--visible');
     }
   });

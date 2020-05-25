@@ -535,50 +535,53 @@
 
 
         <div class="team__wrap">
-          <div class="team-card team-card__people">
-            <div class="team-card__sticker">
-              <img src="img/team/tag-1.svg" alt="стикер" class="sticker__img">
-            </div>
-
-            <div class="team-img-wrap">
-              <img src="img/team/teamPhoto-1.jpg" alt="Проектный менеджер" class="team__img">
-            </div>
-            <div class="team-card__text wow animate__fadeInRight ">
-              <h3 class="team-card__title">Алексей Колмаков</h3>
-              <span class="team-card__subtitle">Проектный менеджер</span>
-              <strong class="team-card__experience">Опыт работы 8 лет</strong>
-            </div>
-          </div>
-
-          <div class="team-card team-card__people">
-            <div class="team-card__sticker">
-              <img src="img/team/tag-2.svg" alt="стикер" class="sticker__img">
-            </div>
-
-            <div class="team-img-wrap">
-              <img src="img/team/teamPhoto-2.jpg" alt="Дизайнер" class="team__img">
-            </div>
-            <div class="team-card__text wow animate__fadeInRight ">
-              <h3 class="team-card__title">Алиса Сухорукова</h3>
-              <span class="team-card__subtitle">Дизайнер</span>
-              <strong class="team-card__experience">Опыт работы 6 лет</strong>
+          <div class="team__content">
+            <div class="team-card team-card__people">
+            
+              <div class="sticker team-card__sticker team-card__sticker--first"></div>              
+              
+              <div class="team-img-wrap">
+                <img src="img/team/teamPhoto-1.jpg" alt="Проектный менеджер" class="team__img">
+              </div>
+              <div class="team-card__text wow animate__fadeInRight ">
+                <h3 class="team-card__title">Алексей Колмаков</h3>
+                <span class="team-card__subtitle">Проектный менеджер</span>
+                <strong class="team-card__experience">Опыт работы 8 лет</strong>
+              </div>
             </div>
           </div>
 
-          <div class="team-card team-card__people">
-            <div class="team-card__sticker">
-              <img src="img/team/tag-3.svg" alt="стикер" class="sticker__img">
-            </div>
-
-            <div class="team-img-wrap">
-              <img src="img/team/teamPhoto-3.jpg" alt="Бригадир" class="team__img">
-            </div>
-            <div class="team-card__text wow animate__fadeInRight ">
-              <h3 class="team-card__title">Давид Волынев</h3>
-              <span class="team-card__subtitle">Бригадир</span>
-              <strong class="team-card__experience">Опыт работы 7 лет</strong>
+          <div class="team__content">
+            <div class="team-card team-card__people">
+              <div class="sticker team-card__sticker team-card__sticker--second"></div>           
+  
+              <div class="team-img-wrap">
+                <img src="img/team/teamPhoto-2.jpg" alt="Дизайнер" class="team__img">
+              </div>
+              <div class="team-card__text wow animate__fadeInRight ">
+                <h3 class="team-card__title">Алиса Сухорукова</h3>
+                <span class="team-card__subtitle">Дизайнер</span>
+                <strong class="team-card__experience">Опыт работы 6 лет</strong>
+              </div>
             </div>
           </div>
+
+          
+          <div class="team__content">
+            <div class="team-card team-card__people">
+              <div class="sticker team-card__sticker team-card__sticker--third"></div>
+  
+              <div class="team-img-wrap">
+                <img src="img/team/teamPhoto-3.jpg" alt="Бригадир" class="team__img">
+              </div>
+              <div class="team-card__text wow animate__fadeInRight ">
+                <h3 class="team-card__title">Давид Волынев</h3>
+                <span class="team-card__subtitle">Бригадир</span>
+                <strong class="team-card__experience">Опыт работы 7 лет</strong>
+              </div>
+            </div>
+          </div>
+        
 
         </div>
 
@@ -590,12 +593,12 @@
 
 <!--    наши клиенты -->
 
-    <section class="section client client__section">
+    <section class="section client">
 
       <div class="container">
 
         <div class="section-title client__section-title wow animate__fadeInUp">
-          <h2 class="section-title__heading client__section-title">Наши клиенты</h2>
+          <h2 class="section-title__heading">Наши клиенты</h2>
           <div class="section-title__img">
             <img src="img/clients/client-icon.svg" alt="clients">
           </div>
@@ -607,7 +610,7 @@
         <div class="client__wrap">
 
           <div class="client__card">
-            <div class="client__fullName">
+            <div class="client__fullname">
               <div class="client__photo">
                 <img src="img/clients/client-1.jpg" alt="фото клиента" class="client__img">
               </div>
@@ -630,7 +633,7 @@
           </div>
 
           <div class="client__card">
-            <div class="client__fullName">
+            <div class="client__fullname">
               <div class="client__photo">
                 <img src="img/clients/client-2.jpg" alt="фото клиента" class="client__img">
               </div>
@@ -653,7 +656,7 @@
           </div>
 
           <div class="client__card">
-            <div class="client__fullName">
+            <div class="client__fullname">
               <div class="client__photo">
                 <img src="img/clients/client-3.jpg" alt="фото клиента" class="client__img">
               </div>
@@ -803,13 +806,13 @@
     
   </div> 
 
-  <div class="thanks__container">
+  <div class="thanks">
 
-    <div class="thanksBlock">
+    <div class="thanks__block">
 
-      <h1 class="thanksBlock__title">Спасибо за заявку</h1>
-      <p class="thanksBlock__subtitle">Наш менеджер свяжется с Вами <br> в течении 15 минут</p>
-      <button class="button thanksBlock__button button--primary">Закрыть</button>
+      <h2 class="thanks__title">Спасибо за заявку</h2>
+      <p class="thanks__subtitle">Наш менеджер свяжется с Вами <br> в течении 15 минут</p>
+      <button class="button thanks__button button--primary">Закрыть</button>
       
     </div>
 
