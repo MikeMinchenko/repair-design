@@ -1,0 +1,49 @@
+<?php
+
+$userName = $_POST['userName'];
+$userEmail = $_POST['userEmail'];
+$userPhone = $_POST['userPhone'];
+$userQuestion = $_POST['userQuestion'];
+
+// Load Composer's autoloader
+require 'phpmailer/PHPMailer.php';
+require 'phpmailer/SMTP.php';
+require 'phpmailer/Exception.php';
+
+// Instantiation and passing `true` enables exceptions
+$mail = new PHPMailer\PHPMailer\PHPMailer();
+
+try {
+    //Server settings
+    $mail->SMTPDebug = 0;
+    $mail->CharSet = 'UTF-8';                      // Enable verbose debug output
+    $mail->isSMTP();                                            // Send using SMTP
+    $mail->Host       = 'smtp.gmail.com';                    // Set the SMTP server to send through
+    $mail->SMTPAuth   = true;                                   // Enable SMTP authentication
+    $mail->Username   = 'from0toweb@gmail.com';                     // SMTP username
+    $mail->Password   = 'MMa071290';                               // SMTP password
+    $mail->SMTPSecure = 'ssl';         // Enable TLS encryption; `PHPMailer::ENCRYPTION_SMTPS` also accepted
+    $mail->Port       = 465;                                    // TCP port to connect to
+
+    //Recipients
+    $mail->setFrom('from0toweb@gmail.com');
+    $mail->addAddress('mike.me2013@yandex.ru');     // Add a recipient
+
+    // Content
+    $mail->isHTML(true);                                  // Set email format to HTML
+    $mail->Subject = 'Новая заявка с сайта RepairDesign';
+    $mail->Body    = "Имя пользователя: ${userName}. Телефон: ${userPhone}. Почта: ${userEmail}. Вопрос : ${userQuestion}";
+
+
+    if ($mail->send()) {
+        echo "ок";
+    } else {
+        echo "Письмо не отправлено, есть ошибка. Код ошибки: {$mail->ErrorInfo}";
+    }
+    
+    } catch (Exception $e) {
+        echo "Письмо не отправлено, есть ошибка. Код ошибки: {$mail->ErrorInfo}";
+}
+
+
+

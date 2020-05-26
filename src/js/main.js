@@ -49,7 +49,13 @@ $(document).ready(function () {
     } else {
         $('.goTop').fadeOut();
     }
-});
+  });
+
+  $("a[href^='#']").click(function(){
+    var _href = $(this).attr("href");
+    $("html, body").animate({scrollTop: $(_href).offset().top - 87},1400);
+    return false;
+  });
 
   // // скрытие to top на маленьких экранах
   // $(window).width(function(){
@@ -387,6 +393,25 @@ $(document).ready(function () {
     ymap();
    
   });
+
+  // ВИДЕО С ЮТУБА
+  var player;
+  $('.video__play').on('click', 
+    function onYouTubeIframeAPIReady() {
+      player = new YT.Player('player', {
+        height: '100%',
+        width: '100%',
+        videoId: 'RHzzLqJWqHs',
+        events: {
+          'onReady': videoPlay        
+        }
+      });
+    })   
+  
+  function videoPlay(event) {
+    event.target.playVideo();
+  }
+  
 });
 
 
