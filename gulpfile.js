@@ -5,7 +5,7 @@ const autoprefixer = require('gulp-autoprefixer');
 const cleanCSS = require('gulp-clean-css');
 const minify = require('gulp-minify');
 const htmlmin = require('gulp-htmlmin');
-var tinypng = require('gulp-tinypng-compress');
+const tinypng = require('gulp-tinypng-compress');
 
 function bs() {
   serveSass();
@@ -39,8 +39,14 @@ function minCss(done) {
       
 };
 function minJs(done){
-  src(['src/js/**.js', '!src/js/**.min.js'])    
-    .pipe(minify())
+    src(['src/js/**.js', '!src/js/**.min.js'])    
+    .pipe(minify({
+      ext:{
+        min:'.js'
+      },
+      noSource: true,
+
+    }))
     .pipe(dest('dist/js/'));
   src('src/js/**.min.js')
     .pipe(dest('dist/js/')); 
@@ -76,6 +82,6 @@ function minImg(done){
 }
 
 exports.serve = bs;
-exports.build = series(minCss, minHtml, php, fonts, minImg); 
-// minJs
+exports.build = series(minCss, minHtml,minJs, php, fonts, minImg); 
+// 
 // exports.serveSass = serveSass;

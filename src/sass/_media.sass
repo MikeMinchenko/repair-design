@@ -19,6 +19,12 @@
     &__tags
       max-width: 293px
       width: 100%
+  .modal
+    &__user-email
+      div
+        &.invalid          
+          bottom: -14px
+        
 @media screen and ( min-width: 992px )
   .menu
     &__logo
@@ -55,6 +61,11 @@
   .goTop
     &:hover
       background-color: rgba($primary, 0.2)
+  .footer
+    &__heading
+      &--link
+        &:hover
+          color: lighten($primary, 10)
 @media screen and ( max-width: 992px ) 
   .contacts
     display: flex
@@ -127,6 +138,7 @@
       display: none
       align-self: center
   .projects
+    background-image: none
     &-lines
       display: none
     &__row
@@ -169,7 +181,15 @@
       &__text
         margin-right: 40px
     &-text
-      display: none    
+      display: none   
+    &__content
+      padding-top: 35px
+      padding-left: 35px
+      margin-bottom: 4.55rem
+    &-card
+      &__text
+        margin-left: auto
+        margin-right: auto 
   .client
     padding-bottom: 290px
     &__wrap
@@ -375,6 +395,8 @@
   .modal
     &__button
       align-self: center
+    &__dialog
+      padding: 2.357rem 2.4rem 1.928rem
   .projects
     padding-top: 33px
     padding-bottom: 25.2rem
@@ -412,11 +434,7 @@
     padding-top: 83px
   .team
     &__wrap
-      margin-bottom: 3.8rem
-    &__content
-      padding-top: 35px
-      padding-left: 35px
-      margin-bottom: 4.55rem
+      margin-bottom: 3.8rem    
     &__section
       &-subtitle
         margin-bottom: 3.8rem
@@ -427,27 +445,12 @@
     &__button
       width: 100%
     &-menu
-      display: none
-@media screen and ( max-width: 321px )
-  .team
-    &-card
-      &__text
-        margin-left: auto
-        margin-right: auto
-@media screen and ( max-height: 320px  )
-  .hero
-    padding-top: 70px
-    &__content
-      max-width: 34.5rem
-    &__button
-      display: inline-block
-      max-width: 192px
-      min-width: 192px
-      width: 100%
+      display: none   
+@media screen and ( max-height: 465px )
   .modal
     &__dialog
-      max-width: 100%
-      height: 100%
+      max-width: 568px
+      height: 320px
     &__form
       flex-direction: row
       flex-wrap: wrap
@@ -465,9 +468,22 @@
       margin-bottom: 3.585rem
   .thanks
     &__block
-      max-width: 100%
-      height: 100%
+      max-width: 568px
+      height: 320px
       min-height: unset
+  
+@media screen and ( max-height: 320px  )
+  .hero
+    padding-top: 70px
+    &__content
+      max-width: 34.5rem
+    &__button
+      display: inline-block
+      max-width: 192px
+      min-width: 192px
+      width: 100%
+  
+  
           
 
   
