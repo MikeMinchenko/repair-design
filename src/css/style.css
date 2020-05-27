@@ -326,6 +326,7 @@ template {
   display: none; }
 
 .container {
+  position: relative;
   max-width: 1240px;
   margin: auto;
   width: 90%; }
@@ -1610,8 +1611,8 @@ input.invalid {
   .team {
     background-color: #131313;
     padding-top: 7px; }
-    .team-lines {
-      display: none; }
+    .team__bg-lines-wrap {
+      background-image: none; }
     .team__section-title {
       margin-top: 0; }
     .team__wrap {

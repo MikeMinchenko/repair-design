@@ -53,7 +53,7 @@ $(document).ready(function () {
 
   $("a[href^='#']").click(function(){
     var _href = $(this).attr("href");
-    $("html, body").animate({scrollTop: $(_href).offset().top - 30},1400);
+    $("html, body").animate({scrollTop: $(_href).offset().top - 90},1400);
     return false;
   });
   
@@ -245,7 +245,7 @@ $(document).ready(function () {
         required: "Задайте Ваш вопрос",
         minlength: "Вопрос должен быть не короче 10 символов"
         },
-        policyCheckbox: "Установите галочку на соглашении"
+        policyCheckbox: "Примите соглашение"
       },
         
       submitHandler: function(form) {
@@ -257,7 +257,8 @@ $(document).ready(function () {
           success: function (response) {            
             $(form)[0].reset();            
             modal.removeClass('modal--visible');
-            thanks.addClass('thanks--visible');            
+            thanks.addClass('thanks--visible'); 
+            ym('64400377', 'reachGoal', 'form'); return true;           
           },
           
         });
@@ -410,23 +411,23 @@ $(document).ready(function () {
       });
     })   
   // убираем шапку при прокрутке вниз и показываем при прокрутке вверх
-  function videoPlay(event) {
-    event.target.playVideo();
-  }
+  // function videoPlay(event) {
+  //   event.target.playVideo();
+  // }
 
-  var header = $('.header'),
-	scrollPrev = 0;
+  // var header = $('.header'),
+	// scrollPrev = 0;
 
-  $(window).scroll(function() {
-    var scrolled = $(window).scrollTop();
+  // $(window).scroll(function() {
+  //   var scrolled = $(window).scrollTop();
   
-    if ( scrolled > 100 && scrolled > scrollPrev ) {
-      header.addClass('out');
-    } else {
-      header.removeClass('out');
-    }
-    scrollPrev = scrolled;
-  });
+  //   if ( scrolled > 100 && scrolled > scrollPrev ) {
+  //     header.addClass('out');
+  //   } else {
+  //     header.removeClass('out');
+  //   }
+  //   scrollPrev = scrolled;
+  // });
   
 });
 
