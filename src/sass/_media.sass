@@ -94,6 +94,7 @@
       margin-bottom: 3.61rem
   .design
     background: $dark
+    padding-bottom: 10px
     &__card
       margin-bottom: 6.98rem
     &__pricetag
@@ -104,6 +105,7 @@
       color: $light
       margin: 1.6rem auto 3rem auto
       max-width: 33.92rem
+      line-height: 1.734rem
   .card
     &__title
       font-size: 1.25rem 
@@ -111,6 +113,8 @@
       margin-left: 0
       margin-top: -11.67rem
       max-width: 22.4rem
+      padding-bottom: 1.7rem
+      padding-top: 1.9rem
     &__list
       font-size: 1.08rem
       line-height: 1.93rem
@@ -145,19 +149,7 @@
       flex-direction: row
       align-items: start
   .steps
-    &__row
-      flex-direction: column      
-    &__subtitle
-      margin-top: 0
-    &-slide
-      &__text
-        &--first
-          max-width: 27.16rem
-        &--second
-          max-width: 27.16rem
-    &__swiperText
-      &-container
-        margin-bottom: 4rem
+    display: none
   .col
     &-37-8
       width: 80%
@@ -166,12 +158,11 @@
       align-self: center
   .team
     background-color: $dark
+    padding-top: 7px
     &-lines
       display: none
-    &__content
-      margin-bottom: 7.6rem
-      &:nth-child(3)          
-          margin-bottom: 0  
+    &__section-title
+      margin-top: 0    
     &__wrap
       flex-direction: column
       align-items: center
@@ -185,7 +176,9 @@
     &__content
       padding-top: 35px
       padding-left: 35px
-      margin-bottom: 4.55rem
+      margin-bottom: 4.45rem
+      &:nth-child(3)          
+          margin-bottom: 0 
     &-card
       &__text
         margin-left: auto
@@ -216,16 +209,15 @@
     &__instagram
       display: none
     &__content
-      margin-left: 3.98rem
-  .projects
-    &__row
-      flex-direction: column
+      margin-left: 3.98rem  
   .col-45
     width: 100%
     margin-bottom: 1.8rem
   .col-55
     width: 100%
   .projects
+    &__row
+      flex-direction: column    
     &__swiper
       &-container
         margin-bottom: 1rem
@@ -233,7 +225,7 @@
         padding-bottom: 1.9rem
         &__heading
           font-size: 1.166rem
-          margin-bottom: 0.92rem
+          margin-bottom: 1.02rem
         &__value
           font-size: 1.17rem
         &__text
@@ -260,9 +252,7 @@
     &__button
       order: 1
       display: block
-      margin: auto
-  .steps
-    display: none
+      margin: auto  
   .design
     padding-bottom: 7px
   .team
@@ -272,11 +262,10 @@
       color: $light 
     &__title-heading
       margin-bottom: 1rem   
-    &__section-title
-      margin-top: 0
-      margin-bottom: 1.6rem
+    &__section-title      
+      margin-bottom: 1.65rem
     &__section-subtitle
-      margin-bottom: 6.7rem    
+      margin-bottom: 3.8rem    
     
        
       
@@ -340,7 +329,7 @@
         font-size: 1.333rem
   .footer
     background-image: none
-    padding-top: 17px
+    padding-top: 16px
     &-wrap
       background-image: none
       background-color: $dark
@@ -356,6 +345,8 @@
     &__input-group
       width: 100%
       margin-bottom: 4.982rem
+      &:nth-child(2)
+        margin-bottom: 5.282rem        
       &:nth-child(3)
         margin-bottom: 0.73rem
     &__policy
@@ -377,6 +368,8 @@
         height: 39px
     &__mail
       margin-right: 18px
+    &__inst
+      margin-right: -3px
   .goTop
     display: none
   .team
@@ -399,7 +392,7 @@
       padding: 2.357rem 2.4rem 1.928rem
   .projects
     padding-top: 33px
-    padding-bottom: 25.2rem
+    padding-bottom: 25rem
     &-img-wrap
       max-height: 202px
       margin: 0
@@ -435,9 +428,6 @@
   .team
     &__wrap
       margin-bottom: 3.8rem    
-    &__section
-      &-subtitle
-        margin-bottom: 3.8rem
     &-card
       &__subtitle
         margin-bottom: 23px      
@@ -445,7 +435,9 @@
     &__button
       width: 100%
     &-menu
-      display: none   
+      display: none 
+    &__input
+      padding-top: 0.2rem  
 @media screen and ( max-height: 465px )
   .modal
     &__dialog

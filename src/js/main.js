@@ -53,10 +53,11 @@ $(document).ready(function () {
 
   $("a[href^='#']").click(function(){
     var _href = $(this).attr("href");
-    $("html, body").animate({scrollTop: $(_href).offset().top - 87},1400);
+    $("html, body").animate({scrollTop: $(_href).offset().top - 30},1400);
     return false;
   });
-
+  
+  
   // // скрытие to top на маленьких экранах
   // $(window).width(function(){
   //   if ($(this).width() > 576) {
@@ -248,16 +249,17 @@ $(document).ready(function () {
       },
         
       submitHandler: function(form) {
+        
         $.ajax({
           type: "POST",
           url: "send.php",
           data: $(form).serialize(),        
           success: function (response) {            
-            $(form)[0].reset();
+            $(form)[0].reset();            
             modal.removeClass('modal--visible');
-            thanks.addClass('thanks--visible');
-
-          }
+            thanks.addClass('thanks--visible');            
+          },
+          
         });
       }
     });
